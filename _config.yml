@@ -15,7 +15,7 @@ favicon: favicon.ico
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://github.com/Catlina-2B/catlina-2B.github.io
 root: catlina-2B.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
