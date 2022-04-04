@@ -107,7 +107,7 @@ theme: shoka
 deploy:
   type: git
   repo: git@github_mine:Catlina-2B/catlina-2B.github.io.git
-  branch: gh-pages
+  branch: master
 
 live2d:
   # (关闭请设置为false)
