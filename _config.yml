@@ -106,7 +106,7 @@ theme: shoka
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/Catlina-2B/catlina-2B.github.io
+  repo: git@github.com:Catlina-2B/catlina-2B.github.io.git
   branch: gh-pages
 
 live2d:
