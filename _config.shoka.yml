@@ -1,0 +1,116 @@
+
+alternate: Catlina
+
+loader:
+  start: true
+  switch: false
+
+fireworks:
+  enable: true # 是否启用
+  color: # 烟花颜色
+    - "rgba(255,182,185,.9)"
+    - "rgba(250,227,217,.9)"
+    - "rgba(187,222,214,.9)"
+    - "rgba(138,198,209,.9)"
+
+font:
+  enable: true
+  # Font options:
+  # `external: true` will load this font family from `host` above.
+  # `family: Times New Roman`. Without any quotes.
+  # `size: x.x`. Use `em` as unit. Default: 1 (16px)
+  # Global font settings used for all elements inside <body>.
+  global:
+    external: true
+    family: Mulish
+    size:
+  # Font settings for alternate title.
+  logo:
+    external: true
+    family: Fredericka the Great
+    size: 3.5
+  # Font settings for site title.
+  title:
+    external: true
+    family: Noto Serif JP
+    size: 2.5
+  # Font settings for headlines (<h1> to <h6>).
+  headings:
+    external: true
+    family: Noto Serif SC
+    size:
+  # Font settings for posts.
+  posts:
+    external: true
+    family:
+  # Font settings for <code> and code blocks.
+  codes:
+    external: true
+    family: Inconsolata
+
+menu:
+  home: / || home
+  about: /about/ || user
+  posts:
+    default: / || feather
+    archives: /archives/ || list-alt
+    categories: /categories/ || th
+    tags: /tags/ || tags
+  # friends: /friends/ || heart
+  # links: /links/ || magic
+music:
+  enable: false
+  # 播放器尺寸类型(1：长尺寸、2：短尺寸)
+  type: 2
+  id: 1332647902  # 网易云分享的音乐ID(更换音乐请更改此配置项)
+  autoPlay: true  # 是否开启自动播放
+  # 提示文本(关闭请设置为false)
+  text: '这似乎是首纯音乐，请尽情的欣赏它吧！'
+
+
+
+algolia:
+  appId: #Your appId
+  apiKey: #Your apiKey
+  adminApiKey: #Your adminApiKey
+  chunkSize: 5000
+  indexName: #"shoka"
+  fields:
+    - title #必须配置
+    - path #必须配置
+    - categories #推荐配置
+    - content:strip:truncate,0,2000
+    - gallery
+    - photos
+    - tags
+	
+keywords: #站点关键词，用 “,” 分隔
+feed:
+    limit: 20
+    order_by: "-date"
+    tag_dir: false
+    category_dir: false
+    rss:
+        enable: true
+        template: "themes/shoka/layout/_alternate/rss.ejs"
+        output: "rss.xml"
+    atom:
+        enable: true
+        template: "themes/shoka/layout/_alternate/atom.ejs"
+        output: "atom.xml"
+    jsonFeed:
+        enable: true
+        template: "themes/shoka/layout/_alternate/json.ejs"
+        output: "feed.json"
+
+social:
+  github: https://github.com/catlina-2B || github || "#191717"
+  twitter: https://twitter.com/catlina2B || twitter || "#00aff0"
+  email: Catlina1996@163.com || envelope || "#55acd5"
+  telegram: https://t.me/Catlina || telegram || "#ea716e"
+
+sidebar:
+  # Sidebar Position.
+  position: right
+
+  avatar: headImg.jpg
