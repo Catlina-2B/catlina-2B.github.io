@@ -16,7 +16,7 @@ favicon: favicon.ico
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://github.com/Catlina-2B/catlina-2B.github.io
-root: catlina-2B.github.io
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -111,7 +111,7 @@ deploy:
 
 live2d:
   # (关闭请设置为false)
-  enable: true
+  enable: false
   # 模型名称(取值请参考：https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA)
   model: 
     use: hibiki
