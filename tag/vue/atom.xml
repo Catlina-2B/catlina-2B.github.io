@@ -7,9 +7,9 @@
     <category term="算法" />
     <category term="markdown" />
     <category term="nuxt" />
+    <category term="websocket" />
     <category term="vue" />
     <category term="seo" />
-    <category term="websocket" />
     <entry>
         <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/04/01/vueseo/</id>
         <title>prerender-spa-plugin Vue预渲染配合meta-info优化seo</title>

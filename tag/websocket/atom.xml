@@ -7,9 +7,9 @@
     <category term="算法" />
     <category term="markdown" />
     <category term="nuxt" />
+    <category term="websocket" />
     <category term="vue" />
     <category term="seo" />
-    <category term="websocket" />
     <entry>
         <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/04/01/websocket/</id>
         <title>uni-app 真机测试 socketTask = uni.connectSocket 可以成功，但是socketTask.onOpen 监听不到连接成功</title>
