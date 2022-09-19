@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "DuoLa口袋不放糖 • All posts by \"seo\" tag",
+    "description": "人来人往，盼青龙上岸，只怪你我相见恨晚",
+    "home_page_url": "https://github.com/Catlina-2B/catlina-2B.github.io",
+    "items": [
+        {
+            "id": "https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/vueseo/",
+            "url": "https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/vueseo/",
+            "title": "prerender-spa-plugin Vue预渲染配合meta-info优化seo",
+            "date_published": "2022-09-13T10:41:05.790Z",
+            "content_html": "<h2 id=\"解决过程\"><a class=\"markdownIt-Anchor\" href=\"#解决过程\">#</a> 解决过程</h2>\n<p>先安装 prerender 和 puppeteer 插件  这个国外大神写的  github 地址就不附上了 (百度有)</p>\n<p>cnpm install prerender-spa-plugin</p>\n<p>npm install --save puppeteer --ignore-scripts</p>\n<p>这里注意  一定要用 cnpm 代理下载   不然下载不到 chromium</p>\n<p>安装好之后注意在 package.json 上查看版本号  不同版本号有不同的写法  这个一定要注意（可以上 github 上查看不同版本的写法）</p>\n<h4 id=\"第一步-引入插件及方法不同版本不同用法-此处版本为3x2x请忽略\"><a class=\"markdownIt-Anchor\" href=\"#第一步-引入插件及方法不同版本不同用法-此处版本为3x2x请忽略\">#</a> 第一步 引入插件及方法（不同版本不同用法  此处版本为 3.x，2.x 请忽略）</h4>\n<p><img data-src=\"https://img2018.cnblogs.com/blog/1416731/201904/1416731-20190425155946382-1423490041.png\" alt=\"avatar\"></p>\n<h4 id=\"第二步-配置prerenderspaplugin\"><a class=\"markdownIt-Anchor\" href=\"#第二步-配置prerenderspaplugin\">#</a> 第二步 配置 PrerenderSPAPlugin</h4>\n<p><img data-src=\"https://img2018.cnblogs.com/blog/1416731/201904/1416731-20190425160146809-1146864215.png\" alt=\"avatar\"></p>\n<h4 id=\"第三步-mainjs中将render-event方法放入\"><a class=\"markdownIt-Anchor\" href=\"#第三步-mainjs中将render-event方法放入\">#</a> 第三步 main.js 中将 render-event 方法放入</h4>\n<p><img data-src=\"https://img2018.cnblogs.com/blog/1416731/201904/1416731-20190425160305484-411664263.png\" alt=\"avatar\"></p>\n<p><font color=\"#FF0000\" >这里记住一定要将方法放入 mouted 里面</font></p>\n<h4 id=\"第四步-将-mode-设置为-history-模式不用-history-模式不行这里一定要改为-history-模式\"><a class=\"markdownIt-Anchor\" href=\"#第四步-将-mode-设置为-history-模式不用-history-模式不行这里一定要改为-history-模式\">#</a> 第四步 将 mode 设置为 history 模式（不用 history 模式不行！！！这里一定要改为 history 模式）</h4>\n<h4 id=\"第五步-将-configindexjs-下的-build-中的-assetspublicpath-换成\"><a class=\"markdownIt-Anchor\" href=\"#第五步-将-configindexjs-下的-build-中的-assetspublicpath-换成\">#</a> 第五步 将 config/index.js 下的 build 中的 assetsPublicPath 换成’…/’</h4>\n<p><img data-src=\"https://img2018.cnblogs.com/blog/1416731/201904/1416731-20190425161649573-385520517.png\" alt=\"avatar\"></p>\n<p>最后直接打包 npm run build 就可以了</p>\n<p>过程中会出现 minichrome 测试浏览器，生成 dist 文件内包含预渲染文件目录</p>\n",
+            "tags": [
+                "vue",
+                "seo"
+            ]
+        }
+    ]
+}

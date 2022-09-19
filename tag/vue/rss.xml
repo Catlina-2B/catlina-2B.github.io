@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>DuoLa口袋不放糖 • Posts by &#34;vue&#34; tag</title>
+        <link>https://github.com/Catlina-2B/catlina-2B.github.io</link>
+        <description>人来人往，盼青龙上岸，只怪你我相见恨晚</description>
+        <language>zh-tw</language>
+        <pubDate>Tue, 13 Sep 2022 18:41:05 +0800</pubDate>
+        <lastBuildDate>Tue, 13 Sep 2022 18:41:05 +0800</lastBuildDate>
+        <category>markdown</category>
+        <category>算法</category>
+        <category>css</category>
+        <category>mac</category>
+        <category>命令行</category>
+        <category>nuxt</category>
+        <category>node</category>
+        <category>http</category>
+        <category>vite</category>
+        <category>dagre</category>
+        <category>vue</category>
+        <category>seo</category>
+        <category>websocket</category>
+        <item>
+            <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/vueseo/</guid>
+            <title>prerender-spa-plugin Vue预渲染配合meta-info优化seo</title>
+            <link>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/vueseo/</link>
+            <category>vue</category>
+            <category>seo</category>
+            <pubDate>Tue, 13 Sep 2022 18:41:05 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;解决过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决过程&#34;&gt;#&lt;/a&gt; 解决过程&lt;/h2&gt;
+&lt;p&gt;先安装 prerender 和 puppeteer 插件  这个国外大神写的  github 地址就不附上了 (百度有)&lt;/p&gt;
+&lt;p&gt;cnpm install prerender-spa-plugin&lt;/p&gt;
+&lt;p&gt;npm install --save puppeteer --ignore-scripts&lt;/p&gt;
+&lt;p&gt;这里注意  一定要用 cnpm 代理下载   不然下载不到 chromium&lt;/p&gt;
+&lt;p&gt;安装好之后注意在 package.json 上查看版本号  不同版本号有不同的写法  这个一定要注意（可以上 github 上查看不同版本的写法）&lt;/p&gt;
+&lt;h4 id=&#34;第一步-引入插件及方法不同版本不同用法-此处版本为3x2x请忽略&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一步-引入插件及方法不同版本不同用法-此处版本为3x2x请忽略&#34;&gt;#&lt;/a&gt; 第一步 引入插件及方法（不同版本不同用法  此处版本为 3.x，2.x 请忽略）&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://img2018.cnblogs.com/blog/1416731/201904/1416731-20190425155946382-1423490041.png&#34; alt=&#34;avatar&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第二步-配置prerenderspaplugin&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第二步-配置prerenderspaplugin&#34;&gt;#&lt;/a&gt; 第二步 配置 PrerenderSPAPlugin&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://img2018.cnblogs.com/blog/1416731/201904/1416731-20190425160146809-1146864215.png&#34; alt=&#34;avatar&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第三步-mainjs中将render-event方法放入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第三步-mainjs中将render-event方法放入&#34;&gt;#&lt;/a&gt; 第三步 main.js 中将 render-event 方法放入&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://img2018.cnblogs.com/blog/1416731/201904/1416731-20190425160305484-411664263.png&#34; alt=&#34;avatar&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color=&#34;#FF0000&#34; &gt;这里记住一定要将方法放入 mouted 里面&lt;/font&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第四步-将-mode-设置为-history-模式不用-history-模式不行这里一定要改为-history-模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第四步-将-mode-设置为-history-模式不用-history-模式不行这里一定要改为-history-模式&#34;&gt;#&lt;/a&gt; 第四步 将 mode 设置为 history 模式（不用 history 模式不行！！！这里一定要改为 history 模式）&lt;/h4&gt;
+&lt;h4 id=&#34;第五步-将-configindexjs-下的-build-中的-assetspublicpath-换成&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第五步-将-configindexjs-下的-build-中的-assetspublicpath-换成&#34;&gt;#&lt;/a&gt; 第五步 将 config/index.js 下的 build 中的 assetsPublicPath 换成’…/’&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://img2018.cnblogs.com/blog/1416731/201904/1416731-20190425161649573-385520517.png&#34; alt=&#34;avatar&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后直接打包 npm run build 就可以了&lt;/p&gt;
+&lt;p&gt;过程中会出现 minichrome 测试浏览器，生成 dist 文件内包含预渲染文件目录&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

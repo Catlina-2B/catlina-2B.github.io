@@ -1,0 +1,627 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="DuoLa口袋不放糖" href="https://github.com/Catlina-2B/catlina-2B.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="DuoLa口袋不放糖" href="https://github.com/Catlina-2B/catlina-2B.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="DuoLa口袋不放糖" href="https://github.com/Catlina-2B/catlina-2B.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="node,http" />
+
+
+<link rel="canonical" href="https://github.com/Catlina-2B/catlina-2B.github.io/2020/09/16/realSSO/">
+
+
+
+  <link ref="stylesheet  href="https://cdn.bootcss.com/mermaid/8.0.0/mermaid.min.css" />
+  <title>
+Node 实现单点登录 sso |
+Catlina = DuoLa口袋不放糖</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Node 实现单点登录 sso
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-09-16 17:13:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-09-16T17:13:00+08:00">2020-09-16</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Catlina</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipesng5oej20zk0m87d4.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-tw">
+  <link itemprop="mainEntityOfPage" href="https://github.com/Catlina-2B/catlina-2B.github.io/2020/09/16/realSSO/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/headImg.jpg">
+    <meta itemprop="name" content="Catlina">
+    <meta itemprop="description" content=", 人来人往，盼青龙上岸，只怪你我相见恨晚">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DuoLa口袋不放糖">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="概念"><a class="markdownIt-Anchor" href="#概念">#</a> 概念</h1>
+<blockquote>
+<p>什么是单点登录？</p>
+</blockquote>
+<p>单点登录即是，当我们在访问某个公司一系列的产品时，登录了某个产品，那么在其他产品也能免登录。<br>
+比如，我在 a.com 登录之后，由于 b.com 和它同属一个产品系列，用户系统是打通的，那么在 b.com 就可以免登录进入。<br>
+今天，我们就着这个登录来说一下吧。</p>
+<h2 id="从状态开始说"><a class="markdownIt-Anchor" href="#从状态开始说">#</a> 从状态开始说</h2>
+<p>我们都知道，http 是无状态的，换句话说就是，请求和响应是基于 TCP 一次性的，它其实本身是不知道发生了什么的。<br>
+但是大多数场景我们都是有状态的，例如一个用户登录了淘宝，买了一件衣服，跟商家扯皮，看直播发了一条弹幕… 这些都是在登录之后才能有的操作，也就是有了登录状态。</p>
+<blockquote>
+<p>小明参加了一场 X 公司举办大型研讨会，来的人有上千个人，为了记录本次大会参与人数，以及识别谁都是谁，大会让他去 X 公司楼下登记处领一张身份卡，上面有 X 公司的特殊 logo，写了小明的名字，关键是还会发光诶～<br>
+小明大感舒服，仿佛有了当贵宾的感 jio，为了表明自己是贵宾，他拿着这个身份卡去购买了很多周边产品…<br>
+ 小明把身份卡放在了口袋，每当他去敏感的地方就有一个人来检查身份，他就要掏出来一次，他觉得很麻烦，于是把身份卡挂在了脖子上，这下保安检查身份只需要远远看一眼身份卡上的特有标识就好了，再也没人烦小明买东西 [泡妞] 了</p>
+</blockquote>
+<p>以上身份卡就是我们俗知的 token，代表了我们的身份，那么如何保证我们的操作是有状态的呢？<br>
+很明显，只需要每次都拿着我们的身份卡去请求内容就好啦，所以延伸出来几个点</p>
+<ul>
+<li>收身份卡</li>
+<li>存身份卡</li>
+<li>发身份卡</li>
+</ul>
+<h2 id="状态接收-存储-发送"><a class="markdownIt-Anchor" href="#状态接收-存储-发送">#</a> 状态接收、存储、发送</h2>
+<p>简单的收发存，大家也都耳熟能详了，这里大致介绍一下。</p>
+<p><b>接收分为两种方式：</b></p>
+<ul>
+<li><code>response</code>  的 data 接收 <code>token</code>  类字段</li>
+<li><code>response</code>  的 header 中 <code>set-cookie</code>  字段直接写入 cookie</li>
+</ul>
+<p>其中第二种方式有需要前后端配合清楚，服务端在设置 cookie 的时候，因为可以选择设置为 http-only，也就是前端通过 js 无法获取和修改，只能服务端读取，那么对前端的状态读取就有问题了。</p>
+<p><b>存储分为两种方式：</b></p>
+<ul>
+<li>将 token 直接存入全局变量或全局状态库，比如：vuex、redux</li>
+<li>保存 token 至 localStorage 或 cookie 中</li>
+</ul>
+<p>存储方式一般由前端与服务端配合方式决定，如果 token 只是会话级别，那么存全局变量还是 cookie 都行，如果是存 localStorage，那么要记得清理。</p>
+<p><b>发送分为两种方式：</b></p>
+<ul>
+<li>将 token 放入头部 <code>Authorization</code>  或 <code>Token</code>  之类的字段中</li>
+<li>将 token 放入 cookie，服务端直接读取 cookie 信息</li>
+</ul>
+<p>发送方式完全由服务端决定接受方式。</p>
+<h2 id="单点登录原理"><a class="markdownIt-Anchor" href="#单点登录原理">#</a> 单点登录原理</h2>
+<p>基于以上概念，我们可以使则某个系统拥有登录状态，但是由于 cookie 受域名（domain）限制，如何让其他域名的系统免登录呢？</p>
+<blockquote>
+<p>小明从研讨会出来身份卡就主动退回去了，紧接着他又去参加了 X 公司举办的驴友会，到这里又让他去 X 公司楼下登记处领一张身份卡，小明看了下跟研讨会的身份卡几乎一模一样，都有 X 公司的特殊 logo，小明的名字，关键是都会发光诶～<br>
+小明想是不是可以通过这个卡进去研讨会呢？于是他马上去试了试，真的可以凭借这个身份卡自由进出两场会～<br>
+这个发现让小明惊喜不已，但是这个身份卡用的是特殊的电池，一旦没电了，就没用了，到时候就只能去 X 公司重新领一张身份卡了…</p>
+</blockquote>
+<p>如上述所说，小明拿着 X 公司登记处给的身份卡可以自由进出两场会，代码中也是一样：<br>
+当系统 A 开始进入，发现需要登录，携带当前页面的 url 跳转到统一登录中心，登录完成后，后端将 token 设置到页面 cookie 中，然后携带 token 和 url 回到系统 A 的 <code>callback页面</code> ， <code>callback页面</code> 将 token 存入 cookie，并跳转回系统 A 最初页面。<br>
+系统 B 进入之后，发现需要登录，同样的携带当前页面的 url 跳转到统一登录中心，登录中心发现当前已经登录，且携带的 url 是经过 sso 注册后的系统，于是携带 token 和 url 跳转回到系统 B 的 <code>callback页面</code> ， <code>callback页面</code> 将 token 存入 cookie，并跳转回系统 B 最初页面。</p>
+<p>因此整体流程图如下：</p>
+<div class="mermaid">
+  sequenceDiagram
+clientA-->>serverA: 请求资源
+serverA-->>clientA: 获取失败，未登录
+clientA-->>clientSSO: 登录，携带页面url-pageA
+clientSSO-->>serverSSO: 输入帐号密码，请求登录
+serverSSO-->>clientSSO: set-cookie，种cookie
+clientSSO-->>clientA: 携带token等信息至callback
+Note left of clientA: 将token等信息设置到cookie，并重定向至pageA
+</div>
+
+<div class="mermaid">
+  sequenceDiagram
+clientB-->>serverB: 请求资源
+serverB-->>clientB: 获取失败，未登录
+clientB-->>clientSSO: 登录，携带页面url-pageB
+clientSSO-->>clientB: 已登录，携带token等信息至callback
+Note left of clientB: 将token等信息设置到cookie，并重定向至pageB
+</div>
+
+<h1 id="实现"><a class="markdownIt-Anchor" href="#实现">#</a> 实现</h1>
+<p>基于以上原理，我们实践需要用到以下系统：client-A、client-B、client-SSO、server-A、server-B、server-SSO，接下来我们开始构建对应系统。</p>
+<h2 id="服务端"><a class="markdownIt-Anchor" href="#服务端">#</a> 服务端</h2>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre>yarn init midway</pre></td></tr></table></figure><p>服务端采用 <code>midwayjs</code>  快速搭建：</p>
+<p>参考<span class="exturl" data-url="aHR0cHM6Ly9taWR3YXlqcy5vcmcvZG9jcy9xdWlja3N0YXJ0">midwayjs 快速开始</span></p>
+<p><b>server-A 和 server-B 核心在于中间件验证 token，当请求进来时，将请求头部身份信息拿去 server-SSO 系统去验证 token：</b></p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> IMiddleware<span class="token punctuation">,</span> makeHttpRequest <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"@midwayjs/core"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Middleware <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"@midwayjs/decorator"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NextFunction<span class="token punctuation">,</span> Context <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"@midwayjs/koa"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>@<span class="token function">Middleware</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">JwtMiddleware</span> <span class="token keyword">implements</span> <span class="token class-name">IMiddleware</span><span class="token operator">&lt;</span>Context<span class="token punctuation">,</span> NextFunction<span class="token operator">></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token keyword">return</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">ctx</span><span class="token operator">:</span> Context<span class="token punctuation">,</span> <span class="token literal-property property">next</span><span class="token operator">:</span> NextFunction</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>      <span class="token keyword">const</span> <span class="token literal-property property">cookies</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> identity<span class="token operator">?</span><span class="token operator">:</span> string<span class="token punctuation">;</span> sid<span class="token operator">?</span><span class="token operator">:</span> string<span class="token punctuation">;</span> name<span class="token operator">?</span><span class="token operator">:</span> string <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre>      <span class="token keyword">const</span> keys <span class="token operator">=</span> ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>ctx<span class="token punctuation">.</span>headers<span class="token punctuation">.</span>cookie<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">";"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre>      keys<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">i</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token keyword">const</span> arr <span class="token operator">=</span> i<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"="</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        cookies<span class="token punctuation">[</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre>      <span class="token comment">// 获取 cookie 信息，请求 server-SSO，验证 token</span></pre></td></tr><tr><td data-num="19"></td><td><pre>      <span class="token keyword">const</span> verify <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token string">"http://127.0.0.1:7001/api/verify"</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>          <span class="token literal-property property">name</span><span class="token operator">:</span> cookies<span class="token punctuation">.</span>name<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="22"></td><td><pre>          <span class="token literal-property property">sid</span><span class="token operator">:</span> cookies<span class="token punctuation">.</span>sid<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="23"></td><td><pre>          <span class="token literal-property property">identity</span><span class="token operator">:</span> cookies<span class="token punctuation">.</span>identity</pre></td></tr><tr><td data-num="24"></td><td><pre>        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="25"></td><td><pre>        <span class="token literal-property property">dataType</span><span class="token operator">:</span> <span class="token string">"json"</span></pre></td></tr><tr><td data-num="26"></td><td><pre>      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="27"></td><td><pre></pre></td></tr><tr><td data-num="28"></td><td><pre>      <span class="token keyword">if</span> <span class="token punctuation">(</span>verify<span class="token punctuation">.</span>data<span class="token punctuation">.</span>success<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="29"></td><td><pre>        ctx<span class="token punctuation">.</span>session<span class="token punctuation">.</span>user <span class="token operator">=</span> verify<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="30"></td><td><pre>        <span class="token keyword">await</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>      <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="32"></td><td><pre>        <span class="token keyword">return</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">success</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token literal-property property">message</span><span class="token operator">:</span> verify<span class="token punctuation">.</span>data<span class="token punctuation">.</span>msssage <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>      <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="34"></td><td><pre>    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="35"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="36"></td><td><pre></pre></td></tr><tr><td data-num="37"></td><td><pre>  <span class="token keyword">static</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> string <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="38"></td><td><pre>    <span class="token keyword">return</span> <span class="token string">"report"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="39"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="40"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p><b>server-SSO 我们这里只做两件事：</b></p>
+<ul>
+<li>登录，利用 jwt 生成 token，并存入 redis</li>
+<li>验证 token 是否有效</li>
+</ul>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  Inject<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  Controller<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  Get<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  Post</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"@midwayjs/decorator"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Context <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"@midwayjs/koa"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> UserService <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"../service/user.service"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> RedisService <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"@midwayjs/redis"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> JwtService <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"@midwayjs/jwt"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> v4 <span class="token keyword">as</span> uuid <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"uuid"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre>@<span class="token function">Controller</span><span class="token punctuation">(</span><span class="token string">"/api"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">APIController</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>  @<span class="token function">Inject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ctx<span class="token operator">:</span> Context<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre>  @<span class="token function">Inject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> userService<span class="token operator">:</span> UserService<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre>  @<span class="token function">Inject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> redisService<span class="token operator">:</span> RedisService<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre>  @<span class="token function">Inject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> jwtService<span class="token operator">:</span> JwtService<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="22"></td><td><pre></pre></td></tr><tr><td data-num="23"></td><td><pre>  <span class="token comment">// 验证 token</span></pre></td></tr><tr><td data-num="24"></td><td><pre>  @<span class="token function">Get</span><span class="token punctuation">(</span><span class="token string">"/verify"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="25"></td><td><pre>  <span class="token keyword">async</span> <span class="token function">verify</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>    <span class="token keyword">try</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="27"></td><td><pre>      <span class="token keyword">const</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="28"></td><td><pre>        identity<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="29"></td><td><pre>        sid</pre></td></tr><tr><td data-num="30"></td><td><pre>      <span class="token punctuation">&#125;</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> sid<span class="token operator">?</span><span class="token operator">:</span> string<span class="token punctuation">;</span> identity<span class="token operator">?</span><span class="token operator">:</span> string<span class="token punctuation">;</span> name<span class="token operator">?</span><span class="token operator">:</span> string <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>query<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>      <span class="token keyword">const</span> tokenExists <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>redisService<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>sid<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="32"></td><td><pre></pre></td></tr><tr><td data-num="33"></td><td><pre>      <span class="token keyword">if</span> <span class="token punctuation">(</span>tokenExists <span class="token operator">&amp;&amp;</span> identity <span class="token operator">==</span> tokenExists<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="34"></td><td><pre>        <span class="token keyword">const</span> <span class="token literal-property property">user</span><span class="token operator">:</span> any <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>jwtService<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>identity<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="35"></td><td><pre>        <span class="token keyword">return</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>          <span class="token literal-property property">success</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="37"></td><td><pre>          <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">"OK"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="38"></td><td><pre>          <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userService<span class="token punctuation">.</span><span class="token function">getUser</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>username<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="39"></td><td><pre>        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="40"></td><td><pre>      <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>        <span class="token keyword">return</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">success</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token literal-property property">msssage</span><span class="token operator">:</span> <span class="token string">"token is invaild."</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="42"></td><td><pre>      <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="43"></td><td><pre>    <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="44"></td><td><pre>      <span class="token keyword">return</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">success</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token literal-property property">msssage</span><span class="token operator">:</span> <span class="token string">"data is invaild."</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="45"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="46"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="47"></td><td><pre></pre></td></tr><tr><td data-num="48"></td><td><pre>  <span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span> val</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="49"></td><td><pre>    <span class="token keyword">this</span><span class="token punctuation">.</span>ctx<span class="token punctuation">.</span>response<span class="token punctuation">.</span>ctx<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> val<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="50"></td><td><pre>      <span class="token literal-property property">expires</span><span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">600000</span><span class="token punctuation">)</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="51"></td><td><pre>      <span class="token literal-property property">signed</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="52"></td><td><pre>      <span class="token literal-property property">httpOnly</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="53"></td><td><pre>      <span class="token literal-property property">sameSite</span><span class="token operator">:</span> <span class="token string">"none"</span></pre></td></tr><tr><td data-num="54"></td><td><pre>    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="55"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="56"></td><td><pre></pre></td></tr><tr><td data-num="57"></td><td><pre>  <span class="token comment">// 登录</span></pre></td></tr><tr><td data-num="58"></td><td><pre>  @<span class="token function">Post</span><span class="token punctuation">(</span><span class="token string">"/login"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="59"></td><td><pre>  <span class="token keyword">async</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> Promise<span class="token operator">&lt;</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">success</span><span class="token operator">:</span> boolean<span class="token punctuation">;</span> message<span class="token operator">:</span> string <span class="token punctuation">&#125;</span><span class="token operator">></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="60"></td><td><pre>    <span class="token keyword">const</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="61"></td><td><pre>      username<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="62"></td><td><pre>      password</pre></td></tr><tr><td data-num="63"></td><td><pre>    <span class="token punctuation">&#125;</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> username<span class="token operator">?</span><span class="token operator">:</span> string<span class="token punctuation">;</span> password<span class="token operator">?</span><span class="token operator">:</span> string <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>body<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="64"></td><td><pre></pre></td></tr><tr><td data-num="65"></td><td><pre>    <span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userService<span class="token punctuation">.</span><span class="token function">getUser</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="66"></td><td><pre>    <span class="token comment">// 用户名密码验证</span></pre></td></tr><tr><td data-num="67"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span>user <span class="token operator">&amp;&amp;</span> user<span class="token punctuation">.</span>password <span class="token operator">===</span> password<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="68"></td><td><pre>      <span class="token keyword">const</span> token <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>jwtService<span class="token punctuation">.</span><span class="token function">sign</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> username<span class="token punctuation">,</span> password <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="69"></td><td><pre>      <span class="token comment">// 生成随机 id</span></pre></td></tr><tr><td data-num="70"></td><td><pre>      <span class="token keyword">const</span> sid <span class="token operator">=</span> <span class="token function">uuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="71"></td><td><pre></pre></td></tr><tr><td data-num="72"></td><td><pre>      <span class="token keyword">if</span> <span class="token punctuation">(</span>user<span class="token punctuation">.</span>sid <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="73"></td><td><pre>        <span class="token comment">// 将 redis 中原 token 删除</span></pre></td></tr><tr><td data-num="74"></td><td><pre>        <span class="token keyword">this</span><span class="token punctuation">.</span>redisService<span class="token punctuation">.</span><span class="token function">del</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>sid<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="75"></td><td><pre>      <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="76"></td><td><pre>      <span class="token comment">// 将新的 token 存入 redis</span></pre></td></tr><tr><td data-num="77"></td><td><pre>      <span class="token keyword">this</span><span class="token punctuation">.</span>redisService<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>sid<span class="token punctuation">,</span> token<span class="token punctuation">,</span> <span class="token string">"EX"</span><span class="token punctuation">,</span> <span class="token number">86400</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="78"></td><td><pre></pre></td></tr><tr><td data-num="79"></td><td><pre>      <span class="token keyword">this</span><span class="token punctuation">.</span>ctx<span class="token punctuation">.</span>session<span class="token punctuation">.</span>user <span class="token operator">=</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="80"></td><td><pre>        sid<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="81"></td><td><pre>        token</pre></td></tr><tr><td data-num="82"></td><td><pre>      <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="83"></td><td><pre></pre></td></tr><tr><td data-num="84"></td><td><pre>      <span class="token comment">// 将 token 信息设置到 web 的 cookie 中</span></pre></td></tr><tr><td data-num="85"></td><td><pre>      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token string">'sid'</span><span class="token punctuation">,</span> sid<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="86"></td><td><pre>      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token string">'identity'</span><span class="token punctuation">,</span> token<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="87"></td><td><pre>      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setCookie</span><span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">,</span> user<span class="token punctuation">.</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="88"></td><td><pre></pre></td></tr><tr><td data-num="89"></td><td><pre>      <span class="token keyword">this</span><span class="token punctuation">.</span>userService<span class="token punctuation">.</span><span class="token function">setUserToken</span><span class="token punctuation">(</span>username<span class="token punctuation">,</span> token<span class="token punctuation">,</span> sid<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="90"></td><td><pre>      <span class="token keyword">return</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="91"></td><td><pre>        <span class="token literal-property property">success</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="92"></td><td><pre>        <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">"OK"</span></pre></td></tr><tr><td data-num="93"></td><td><pre>      <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="94"></td><td><pre>    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="95"></td><td><pre>      <span class="token keyword">return</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">success</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">"username or password is invalid."</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="96"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="97"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="98"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h2 id="前端"><a class="markdownIt-Anchor" href="#前端">#</a> 前端</h2>
+<p>前端采用 <code>vite + vue3</code>  快速搭建：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">yarn</span> create vite</pre></td></tr></table></figure><p>参考<span class="exturl" data-url="aHR0cHM6Ly9jbi52aXRlanMuZGV2L2d1aWRlLyNzY2FmZm9sZGluZy15b3VyLWZpcnN0LXZpdGUtcHJvamVjdA==">vite 官方文档</span></p>
+<p><b>client-A 和 client-B 系统页面路由守卫鉴权，如果 cookie 中令牌不存在，跳转到 client-SSO：</b></p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> Cookies <span class="token keyword">from</span> <span class="token string">'js-cookie'</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">const</span> back_page <span class="token operator">=</span> <span class="token string">'/callback'</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre>  <span class="token keyword">const</span> identity <span class="token operator">=</span> Cookies<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'identity'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  <span class="token keyword">const</span> sid <span class="token operator">=</span> Cookies<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'sid'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre>  <span class="token keyword">if</span> <span class="token punctuation">(</span>identity <span class="token operator">&amp;&amp;</span> sid<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span>to<span class="token punctuation">.</span>path <span class="token operator">===</span> back_page<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>      <span class="token function">next</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span>to<span class="token punctuation">.</span>path <span class="token operator">===</span> back_page<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>      <span class="token keyword">const</span> redirect_url <span class="token operator">=</span> to<span class="token punctuation">.</span>fullPath</pre></td></tr><tr><td data-num="17"></td><td><pre>      window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://127.0.0.1:6001/?redirect_url=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>redirect_url<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&amp;name=a</span><span class="token template-punctuation string">`</span></span></pre></td></tr><tr><td data-num="18"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="21"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p><b>client-SSO 登录页面做两件事：</b></p>
+<ul>
+<li>当没有 token 去登录</li>
+<li>当有 token 直接携带 token 重定向回去</li>
+</ul>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token operator">&lt;</span>script setup<span class="token operator">></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment">// This starter template is using Vue 3 &lt;script setup> SFCs</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment">// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> ref<span class="token punctuation">,</span> onMounted<span class="token punctuation">,</span> computed<span class="token punctuation">,</span> watch <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vue'</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> useRoute <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'vue-router'</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">import</span> Cookies <span class="token keyword">from</span> <span class="token string">'js-cookie'</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">const</span> username <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token keyword">const</span> password <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token keyword">const</span> logined <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token function">useRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">const</span> ssoRegisters <span class="token operator">=</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>  <span class="token string-property property">"a"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"http://test-a.com:6002/callback"</span></pre></td></tr><tr><td data-num="21"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="22"></td><td><pre>  <span class="token string-property property">"b"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"http://test-b.com:6003/callback"</span></pre></td></tr><tr><td data-num="24"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="26"></td><td><pre></pre></td></tr><tr><td data-num="27"></td><td><pre><span class="token keyword">const</span> <span class="token function-variable function">signIn</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="28"></td><td><pre>  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"http://127.0.0.1:7001/api/login"</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="29"></td><td><pre>    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="30"></td><td><pre>    <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>      <span class="token string-property property">"Content-Type"</span><span class="token operator">:</span> <span class="token string">"application/json; charset=utf-8"</span></pre></td></tr><tr><td data-num="32"></td><td><pre>    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="33"></td><td><pre>    <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="34"></td><td><pre>      <span class="token literal-property property">username</span><span class="token operator">:</span> username<span class="token punctuation">.</span>value<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="35"></td><td><pre>      <span class="token literal-property property">password</span><span class="token operator">:</span> password<span class="token punctuation">.</span>value</pre></td></tr><tr><td data-num="36"></td><td><pre>    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="37"></td><td><pre>    <span class="token literal-property property">credentials</span><span class="token operator">:</span> <span class="token string">"include"</span></pre></td></tr><tr><td data-num="38"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token parameter">r</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="39"></td><td><pre>    <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> r<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="40"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>success<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>      logined<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="42"></td><td><pre>    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="43"></td><td><pre>      <span class="token function">alert</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>message<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="44"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="45"></td><td><pre>  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="46"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="47"></td><td><pre></pre></td></tr><tr><td data-num="48"></td><td><pre><span class="token keyword">const</span> <span class="token function-variable function">replaceUrl</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="49"></td><td><pre>  <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> identity<span class="token punctuation">,</span> sid<span class="token punctuation">,</span> name <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token function">getCookie</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="50"></td><td><pre></pre></td></tr><tr><td data-num="51"></td><td><pre>  <span class="token keyword">const</span> ssoObj <span class="token operator">=</span> ssoRegisters<span class="token punctuation">[</span>val<span class="token punctuation">.</span>name<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="52"></td><td><pre>  <span class="token keyword">if</span> <span class="token punctuation">(</span>ssoObj <span class="token operator">&amp;&amp;</span> identity <span class="token operator">&amp;&amp;</span> sid <span class="token operator">&amp;&amp;</span> name<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="53"></td><td><pre>    <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>ssoObj<span class="token punctuation">.</span>path<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">?redirect_url=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>val<span class="token punctuation">.</span>redirect_url<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&amp;identity=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>identity<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&amp;name=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>name<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">&amp;sid=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>sid<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="54"></td><td><pre>    window<span class="token punctuation">.</span>location<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="55"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="56"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="57"></td><td><pre></pre></td></tr><tr><td data-num="58"></td><td><pre><span class="token keyword">const</span> <span class="token function-variable function">getCookie</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="59"></td><td><pre>  <span class="token keyword">const</span> identity <span class="token operator">=</span> Cookies<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'identity'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="60"></td><td><pre>  <span class="token keyword">const</span> sid <span class="token operator">=</span> Cookies<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'sid'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="61"></td><td><pre>  <span class="token keyword">const</span> name <span class="token operator">=</span> Cookies<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'username'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="62"></td><td><pre>  <span class="token keyword">return</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="63"></td><td><pre>    identity<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="64"></td><td><pre>    sid<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="65"></td><td><pre>    name</pre></td></tr><tr><td data-num="66"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="67"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="68"></td><td><pre></pre></td></tr><tr><td data-num="69"></td><td><pre><span class="token function">onMounted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="70"></td><td><pre>  <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> identity<span class="token punctuation">,</span> sid<span class="token punctuation">,</span> name <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token function">getCookie</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="71"></td><td><pre>  <span class="token keyword">if</span> <span class="token punctuation">(</span>identity <span class="token operator">&amp;&amp;</span> sid <span class="token operator">&amp;&amp;</span> name<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="72"></td><td><pre>    user<span class="token punctuation">.</span>value <span class="token operator">=</span> name<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="73"></td><td><pre>    logined<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="74"></td><td><pre>  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="75"></td><td><pre>    logined<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="76"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="77"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="78"></td><td><pre></pre></td></tr><tr><td data-num="79"></td><td><pre><span class="token function">watch</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> logined<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> route<span class="token punctuation">.</span>query<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="80"></td><td><pre>  <span class="token keyword">const</span> <span class="token punctuation">[</span>newLogined<span class="token punctuation">,</span> newRoute<span class="token punctuation">]</span> <span class="token operator">=</span> val<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="81"></td><td><pre>  <span class="token keyword">if</span> <span class="token punctuation">(</span>newLogined <span class="token operator">&amp;&amp;</span> newRoute<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="82"></td><td><pre>    <span class="token function">replaceUrl</span><span class="token punctuation">(</span>newRoute<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="83"></td><td><pre>  <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="84"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="85"></td><td><pre>  <span class="token literal-property property">deep</span><span class="token operator">:</span> <span class="token boolean">true</span></pre></td></tr><tr><td data-num="86"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="87"></td><td><pre></pre></td></tr><tr><td data-num="88"></td><td><pre><span class="token keyword">const</span> isLogined <span class="token operator">=</span> <span class="token function">computed</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> logined<span class="token punctuation">.</span>value<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="89"></td><td><pre></pre></td></tr><tr><td data-num="90"></td><td><pre><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></pre></td></tr><tr><td data-num="91"></td><td><pre></pre></td></tr><tr><td data-num="92"></td><td><pre><span class="token operator">&lt;</span>template<span class="token operator">></span></pre></td></tr><tr><td data-num="93"></td><td><pre>  <span class="token operator">&lt;</span>div v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">"!isLogined"</span><span class="token operator">></span></pre></td></tr><tr><td data-num="94"></td><td><pre>    <span class="token operator">&lt;</span>h1<span class="token operator">></span><span class="token constant">SSO</span>登录<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span></pre></td></tr><tr><td data-num="95"></td><td><pre>    <span class="token operator">&lt;</span>p<span class="token operator">></span></pre></td></tr><tr><td data-num="96"></td><td><pre>      <span class="token operator">&lt;</span>span<span class="token operator">></span>username<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span></pre></td></tr><tr><td data-num="97"></td><td><pre>      <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"username"</span><span class="token operator">></span></pre></td></tr><tr><td data-num="98"></td><td><pre>    <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span></pre></td></tr><tr><td data-num="99"></td><td><pre>    <span class="token operator">&lt;</span>p<span class="token operator">></span></pre></td></tr><tr><td data-num="100"></td><td><pre>      <span class="token operator">&lt;</span>span<span class="token operator">></span>password<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span></pre></td></tr><tr><td data-num="101"></td><td><pre>      <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"password"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"password"</span><span class="token operator">></span></pre></td></tr><tr><td data-num="102"></td><td><pre>    <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span></pre></td></tr><tr><td data-num="103"></td><td><pre>    <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"signIn"</span><span class="token operator">></span>登录<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span></pre></td></tr><tr><td data-num="104"></td><td><pre>  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></pre></td></tr><tr><td data-num="105"></td><td><pre>  <span class="token operator">&lt;</span>div v<span class="token operator">-</span><span class="token keyword">else</span><span class="token operator">></span></pre></td></tr><tr><td data-num="106"></td><td><pre>    <span class="token operator">&lt;</span>h1<span class="token operator">></span>已登录<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span></pre></td></tr><tr><td data-num="107"></td><td><pre>    <span class="token operator">&lt;</span>p<span class="token operator">></span>Hi， <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>swig￼<span class="token number">2</span><span class="token operator">--</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span></pre></td></tr><tr><td data-num="108"></td><td><pre>  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></pre></td></tr><tr><td data-num="109"></td><td><pre><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span></pre></td></tr></table></figure><p>到此，sso 登录就完成了，其实过程很简单，只要掌握了其中关键，一切就通了。</p>
+<p>当然，这里面还有一些可优化的地方，比如：</p>
+<ul>
+<li>token 设置为 same-site，避免 csrf 攻击</li>
+<li>token 有效期，token 刷新优化</li>
+<li>系统域名绑定更严谨一些，通过配置中心读取</li>
+<li>sso 系统采用服务端渲染，服务端读取 sso 认证配置</li>
+<li>跳转 client-sso 前通过请求 server-sso 一个接口，一般来说可以是一个 img 文件，然后通过服务端 set-cookie 设置 sso 令牌</li>
+</ul>
+<p>等等… 这里只是做一个比较简单的 sso 登录，大家了解原理之后可以改善一下。</p>
+
+      <div class="tags">
+          <a href="/tags/node/" rel="tag"><i class="ic i-tag"></i> node</a>
+          <a href="/tags/http/" rel="tag"><i class="ic i-tag"></i> http</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-09-19 18:41:03" itemprop="dateModified" datetime="2022-09-19T18:41:03+08:00">2022-09-19</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Catlina 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Catlina 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Catlina <i class="ic i-at"><em>@</em></i>DuoLa口袋不放糖
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://github.com/Catlina-2B/catlina-2B.github.io/2020/09/16/realSSO/" title="Node 实现单点登录 sso">https://github.com/Catlina-2B/catlina-2B.github.io/2020/09/16/realSSO/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/02/21/sso/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfb3vzhj20zk0m8wny.jpg" title="一步步实现一个单点登录（含后端）">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>一步步实现一个单点登录（含后端）</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/04/01/example/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitf0kl1j20zk0m87fe.jpg" title="例子">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> md文件编写学习</span>
+  <h3>例子</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text"> 概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E7%8A%B6%E6%80%81%E5%BC%80%E5%A7%8B%E8%AF%B4"><span class="toc-number">1.1.</span> <span class="toc-text"> 从状态开始说</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E6%8E%A5%E6%94%B6-%E5%AD%98%E5%82%A8-%E5%8F%91%E9%80%81"><span class="toc-number">1.2.</span> <span class="toc-text"> 状态接收、存储、发送</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95%E5%8E%9F%E7%90%86"><span class="toc-number">1.3.</span> <span class="toc-text"> 单点登录原理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.</span> <span class="toc-text"> 实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">2.1.</span> <span class="toc-text"> 服务端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF"><span class="toc-number">2.2.</span> <span class="toc-text"> 前端</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Catlina"
+      data-src="/images/headImg.jpg">
+  <p class="name" itemprop="name">Catlina</p>
+  <div class="description" itemprop="description">人来人往，盼青龙上岸，只怪你我相见恨晚</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">14</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">4</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">13</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <a href="https://github.com/catlina-2B" title="https:&#x2F;&#x2F;github.com&#x2F;catlina-2B" class="item github"><i class="ic i-github"></i></a>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jYXRsaW5hMkI=" title="https:&#x2F;&#x2F;twitter.com&#x2F;catlina2B"><i class="ic i-twitter"></i></span>
+      <a href="/Catlina1996@163.com" title="Catlina1996@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL0NhdGxpbmE=" title="https:&#x2F;&#x2F;t.me&#x2F;Catlina"><i class="ic i-telegram"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/02/21/sso/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/04/01/example/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/09/13/optimization/" title="nuxt打包压缩代码">nuxt打包压缩代码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vite/" title="分类于 vite">vite</a>
+</div>
+
+    <span><a href="/2022/09/09/fontHex/" title="css某些字体中0x会变成0">css某些字体中0x会变成0</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/md%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99%E5%AD%A6%E4%B9%A0/" title="分类于 md文件编写学习">md文件编写学习</a>
+</div>
+
+    <span><a href="/2022/04/01/example/" title="例子">例子</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/02/21/sso/" title="一步步实现一个单点登录（含后端）">一步步实现一个单点登录（含后端）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/" title="分类于 命令行">命令行</a>
+</div>
+
+    <span><a href="/2022/09/14/installBrew/" title="mac安装brew报错 fatal unable to access &#39;https:&#x2F;&#x2F;github.com&#x2F;Homebrew&#x2F;brew&#x2F;&#39;">mac安装brew报错 fatal unable to access 'https://github.com/Homebrew/brew/'</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="分类于 算法学习">算法学习</a>
+</div>
+
+    <span><a href="/2022/04/02/twoSum/" title="两数之和">两数之和</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vite/" title="分类于 vite">vite</a>
+</div>
+
+    <span><a href="/2022/09/09/viteDagre/" title="vite 中使用 dagre-d3 报错">vite 中使用 dagre-d3 报错</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="分类于 算法学习">算法学习</a>
+</div>
+
+    <span><a href="/2022/04/03/twoPlus/" title="两数相加">两数相加</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="分类于 算法学习">算法学习</a>
+</div>
+
+    <span><a href="/2022/04/05/binarySearch/" title="二分查找">二分查找</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/09/13/nuxtFont/" title="nuxt引入字体问题">nuxt引入字体问题</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Catlina @ Catlina</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<a href="https://github.com/amehime/hexo-theme-shoka">Shoka</a>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/09/16/realSSO/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+<script src="//cdn.bootcss.com/mermaid/8.0.0/mermaid.min.js"></script>
+<% if (theme.mermaid.enable) { %>
+  <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+<% } %>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":245,"height":515,"hOffset":50},"mobile":{"show":true,"scale":0.6},"react":{"opacity":0.8},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
