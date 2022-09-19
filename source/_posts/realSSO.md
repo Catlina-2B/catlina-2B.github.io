@@ -1,7 +1,7 @@
 ---
-layout: '[layout]'
+layout: "[layout]"
 title: Node 实现单点登录 sso
-date: 2020-09-16 17:13:00
+date: 2020-09-19 18:50:00
 tags:
 - node
 - http

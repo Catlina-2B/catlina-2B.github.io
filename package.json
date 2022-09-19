@@ -8,8 +8,8 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "build-d": "hexo clean && hexo g && hexo d",
-    "gen": "hexo g && mv ./public ../blog-gen/gen",
-    "push": "rm -rf ../blog-gen/gen && yarn gen && sh ../blog-gen/git.sh",
+    "gen": "hexo g && mv ./public/* ../blog-gen/gen/",
+    "push": "rm -rf ../blog-gen/gen/* && yarn gen && sh ../blog-gen/git.sh",
     "commit": "sh ./push.sh"
   },
   "hexo": {
