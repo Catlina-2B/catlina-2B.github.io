@@ -7,8 +7,8 @@
         <language>zh-tw</language>
         <pubDate>Wed, 14 Sep 2022 22:30:00 +0800</pubDate>
         <lastBuildDate>Wed, 14 Sep 2022 22:30:00 +0800</lastBuildDate>
-        <category>markdown</category>
         <category>算法</category>
+        <category>markdown</category>
         <category>css</category>
         <category>mac</category>
         <category>命令行</category>
@@ -536,12 +536,12 @@ alt=&#34;IMAGE ALT TEXT HERE&#34; width=&#34;240&#34; height=&#34;180&#34; borde
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2020/09/16/realSSO/</guid>
+            <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2020/09/19/realSSO/</guid>
             <title>Node 实现单点登录 sso</title>
-            <link>https://github.com/Catlina-2B/catlina-2B.github.io/2020/09/16/realSSO/</link>
+            <link>https://github.com/Catlina-2B/catlina-2B.github.io/2020/09/19/realSSO/</link>
             <category>node</category>
             <category>http</category>
-            <pubDate>Wed, 16 Sep 2020 17:13:00 +0800</pubDate>
+            <pubDate>Sat, 19 Sep 2020 18:50:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#概念&#34;&gt;#&lt;/a&gt; 概念&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;什么是单点登录？&lt;/p&gt;
