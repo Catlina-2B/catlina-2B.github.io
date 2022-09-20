@@ -413,3 +413,5 @@ const isLogined = computed(() => logined.value)
 - 跳转client-sso前通过请求server-sso一个接口，一般来说可以是一个img文件，然后通过服务端set-cookie设置sso令牌
 
 等等......这里只是做一个比较简单的sso登录，大家了解原理之后可以改善一下。
+
+源码我放在了<a href="https://github.com/Catlina-2B/real-sso">https://github.com/Catlina-2B/real-sso</a>上，
