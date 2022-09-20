@@ -639,6 +639,7 @@ Note left of clientB: 将token等信息设置到cookie，并重定向至pageB
 &lt;li&gt;跳转 client-sso 前通过请求 server-sso 一个接口，一般来说可以是一个 img 文件，然后通过服务端 set-cookie 设置 sso 令牌&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;等等… 这里只是做一个比较简单的 sso 登录，大家了解原理之后可以改善一下。&lt;/p&gt;
+&lt;p&gt;源码我放在了&lt;a href=&#34;https://github.com/Catlina-2B/real-sso&#34;&gt;https://github.com/Catlina-2B/real-sso&lt;/a&gt;上，&lt;/p&gt;
 </content>
         <category term="node" />
         <category term="http" />
