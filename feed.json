@@ -5,14 +5,6 @@
     "home_page_url": "https://github.com/Catlina-2B/catlina-2B.github.io",
     "items": [
         {
-            "id": "https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/about/",
-            "url": "https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/about/",
-            "title": "关于Catlina",
-            "date_published": "2024-03-27T14:48:51.176Z",
-            "content_html": "",
-            "tags": []
-        },
-        {
             "id": "https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/vueseo/",
             "url": "https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/vueseo/",
             "title": "prerender-spa-plugin Vue预渲染配合meta-info优化seo",

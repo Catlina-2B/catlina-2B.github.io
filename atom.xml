@@ -3,18 +3,18 @@
     <id>https://github.com/Catlina-2B/catlina-2B.github.io</id>
     <title>DuoLa口袋不放糖</title>
     <link href="https://github.com/Catlina-2B/catlina-2B.github.io" />
-    <updated>2024-03-27T14:48:51.176Z</updated>
-    <category term="markdown" />
+    <updated>2024-03-27T10:29:33.527Z</updated>
     <category term="EIP" />
-    <category term="EIP-404" />
     <category term="EIP-1559" />
+    <category term="markdown" />
     <category term="css" />
     <category term="mac" />
     <category term="命令行" />
+    <category term="EIP-404" />
     <category term="Mac" />
     <category term="MPC" />
-    <category term="Web3钱包" />
     <category term="nuxt" />
+    <category term="Web3钱包" />
     <category term="node" />
     <category term="http" />
     <category term="算法" />
@@ -23,13 +23,6 @@
     <category term="vue" />
     <category term="seo" />
     <category term="websocket" />
-    <entry>
-        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/about/</id>
-        <title>关于Catlina</title>
-        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/about/"/>
-        <content type="html"></content>
-        <updated>2024-03-27T14:48:51.176Z</updated>
-    </entry>
     <entry>
         <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/vueseo/</id>
         <title>prerender-spa-plugin Vue预渲染配合meta-info优化seo</title>
