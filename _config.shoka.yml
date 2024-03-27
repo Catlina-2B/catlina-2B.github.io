@@ -72,18 +72,16 @@ music:
 
 
 algolia:
-  appId: #Your appId
-  apiKey: #Your apiKey
-  adminApiKey: #Your adminApiKey
+  appId: LP4OAWGV7F
+  apiKey: 00922bb3846f6c4d4a429c474ff6bd5c
+  adminApiKey: 3d6c3876e8b85da458c8b3f64c600635
   chunkSize: 5000
-  indexName: #"shoka"
+  indexName: catlina
   fields:
-    - title #必须配置
-    - path #必须配置
+    - title
+    - path 
     - categories #推荐配置
-    - content:strip:truncate,0,2000
     - gallery
-    - photos
     - tags
 	
 keywords: #站点关键词，用 “,” 分隔
@@ -109,7 +107,7 @@ social:
   github: https://github.com/catlina-2B || github || "#191717"
   twitter: https://twitter.com/catlina2B || twitter || "#00aff0"
   email: Catlina1996@163.com || envelope || "#55acd5"
-  telegram: https://t.me/Catlina || telegram || "#ea716e"
+  telegram: https://t.me/Catlina02 || telegram || "#0088cc"
 
 sidebar:
   # Sidebar Position.

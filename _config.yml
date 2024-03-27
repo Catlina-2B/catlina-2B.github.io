@@ -135,3 +135,17 @@ live2d:
     scale: 0.6 # 移动设备上的缩放(default: 0.5)
   react:
     opacity: 0.8 # 模型透明度(default: 0.7)
+
+
+algolia:
+  appId: LP4OAWGV7F
+  apiKey: 00922bb3846f6c4d4a429c474ff6bd5c
+  adminApiKey: 3d6c3876e8b85da458c8b3f64c600635
+  chunkSize: 5000
+  indexName: catlina
+  fields:
+    - title
+    - path 
+    - categories #推荐配置
+    - gallery
+    - tags

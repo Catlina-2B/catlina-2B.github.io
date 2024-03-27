@@ -145,14 +145,6 @@
 
 <script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
 <script src="//cdn.bootcss.com/mermaid/8.0.0/mermaid.min.js"></script>
-<% if (theme.mermaid.enable) { %>
-  <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
-    }
-  </script>
-<% } %>
 
 {{ _vendor_js() }}
 

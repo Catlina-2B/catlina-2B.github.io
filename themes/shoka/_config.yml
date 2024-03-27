@@ -183,8 +183,8 @@ creative_commons:
 # Valine
 # For more information: https://github.com/amehime/MiniValine
 valine:
-  appId: #Your_appId
-  appKey: #Your_appkey
+  appId: AYGkT5Lbn7ahWjRN38xn0cNs-gzGzoHsz
+  appKey: zMEQ0jcheFtSGz2r0SdlgMSP
   placeholder: ヽ(○´∀`)ﾉ♪ # Comment box placeholder
   avatar: mp # Gravatar style : mp, identicon, monsterid, wavatar, robohash, retro
   pageSize: 10 # Pagination size
@@ -199,11 +199,12 @@ valine:
     friend: 小伙伴
     investor: 金主粑粑
   tagColor:
-    master: "var(--color-orange)"
-    friend: "var(--color-aqua)"
-    investor: "var(--color-pink)"
+    visitor: "#855194"
+    admin: "#a77c59"
+    waifu: "#ed6ea0"
   tagMember:
     master:
+      - catlina186@gmail.com
       # - hash of master@email.com
       # - hash of master2@email.com
     friend:
@@ -311,12 +312,18 @@ markdown:
     - plugin:
         name: ./markdown-it-katex
         enable: true
+    - plugin:
+        name: hexo-algoliasearch
+        enable: true
 mermaid: ## mermaid url https://github.com/knsv/mermaid
   enable: true  # default true
   version: "7.1.2" # default v7.1.2
   options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
     #startOnload: true  // default true
-    
+algolia_search:  
+  enable: true  
+  hits:  
+  per_page: 3
 minify:
   html:
     enable: true
