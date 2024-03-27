@@ -3,30 +3,30 @@
     <id>https://github.com/Catlina-2B/catlina-2B.github.io</id>
     <title>DuoLa口袋不放糖 • Posts by &#34;nuxt&#34; tag</title>
     <link href="https://github.com/Catlina-2B/catlina-2B.github.io" />
-    <updated>2022-09-13T10:41:05.780Z</updated>
+    <updated>2024-03-27T10:29:33.519Z</updated>
     <category term="markdown" />
+    <category term="EIP" />
+    <category term="EIP-404" />
+    <category term="EIP-1559" />
     <category term="css" />
-    <category term="算法" />
     <category term="mac" />
     <category term="命令行" />
     <category term="Mac" />
+    <category term="MPC" />
+    <category term="Web3钱包" />
     <category term="nuxt" />
     <category term="node" />
     <category term="http" />
+    <category term="算法" />
     <category term="vite" />
     <category term="dagre" />
-    <category term="websocket" />
     <category term="vue" />
     <category term="seo" />
-    <category term="MPC" />
-    <category term="EIP" />
-    <category term="Web3钱包" />
-    <category term="EIP-1559" />
-    <category term="EIP-404" />
+    <category term="websocket" />
     <entry>
-        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/nuxtFont/</id>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/nuxtFont/</id>
         <title>nuxt引入字体问题</title>
-        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/nuxtFont/"/>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/nuxtFont/"/>
         <content type="html">&lt;p&gt;nuxt 默认配置了 css 文件的 url-loader&lt;br&gt;
 scss 文件引入字体需要单独配置  build 中的 extend&lt;br&gt;
  具体如何配置  有待研究  暂且记录下这个问题&lt;/p&gt;
@@ -36,12 +36,12 @@ scss 文件引入字体需要单独配置  build 中的 extend&lt;br&gt;
 &lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token atrule&#34;&gt;&lt;span class=&#34;token rule&#34;&gt;@font-face&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;font-family&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;英文&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token url&#34;&gt;&lt;span class=&#34;token function&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string url&#34;&gt;&#39;英文.ttf&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token atrule&#34;&gt;&lt;span class=&#34;token rule&#34;&gt;@font-face&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;font-family&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;中文&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token url&#34;&gt;&lt;span class=&#34;token function&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string url&#34;&gt;&#39;中文.ttf&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token selector&#34;&gt;.body&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;font-family&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;英文&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;中文&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;具体规则参考网址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vZ29sb3ZpbmcvcC85NzIxMzI4Lmh0bWw=&#34;&gt;https://www.cnblogs.com/goloving/p/9721328.html&lt;/span&gt;&lt;/p&gt;
 </content>
         <category term="nuxt" />
-        <updated>2022-09-13T10:41:05.780Z</updated>
+        <updated>2024-03-27T10:29:33.519Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/optimization/</id>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/optimization/</id>
         <title>nuxt打包压缩代码</title>
-        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/optimization/"/>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/optimization/"/>
         <content type="html">&lt;p&gt;webpack4 中使用 &lt;font color=&#34;#FF0000&#34; &gt;uglifyjs-webpack-plugin&lt;/font&gt; 来压缩代码会报错&lt;br&gt;
 网上有人说是&lt;font color=&#34;#FF00FF&#34; &gt;uglifyjs&lt;/font&gt;不支持 ES6 语法，babel 会把项目中的 es6 编译成 es5&lt;br&gt;
  但是 node_modules 中会存在 es6 的  而这里的代码 babel 并不会帮助一块编译  因此还是会报错&lt;/p&gt;
@@ -63,6 +63,6 @@ scss 文件引入字体需要单独配置  build 中的 extend&lt;br&gt;
 &lt;p&gt;nuxt 的问题在网上很少  只能一点点自己摸索  还是要多看文档  多了解版本差异啊！&lt;/p&gt;
 </content>
         <category term="nuxt" />
-        <updated>2022-09-13T10:41:05.780Z</updated>
+        <updated>2024-03-27T10:29:33.519Z</updated>
     </entry>
 </feed>

@@ -5,34 +5,34 @@
         <link>https://github.com/Catlina-2B/catlina-2B.github.io</link>
         <description>人来人往，盼青龙上岸，只怪你我相见恨晚</description>
         <language>zh-tw</language>
-        <pubDate>Tue, 13 Sep 2022 18:41:05 +0800</pubDate>
-        <lastBuildDate>Tue, 13 Sep 2022 18:41:05 +0800</lastBuildDate>
+        <pubDate>Wed, 27 Mar 2024 18:29:33 +0800</pubDate>
+        <lastBuildDate>Wed, 27 Mar 2024 18:29:33 +0800</lastBuildDate>
         <category>markdown</category>
+        <category>EIP</category>
+        <category>EIP-404</category>
+        <category>EIP-1559</category>
         <category>css</category>
-        <category>算法</category>
         <category>mac</category>
         <category>命令行</category>
         <category>Mac</category>
+        <category>MPC</category>
+        <category>Web3钱包</category>
         <category>nuxt</category>
         <category>node</category>
         <category>http</category>
+        <category>算法</category>
         <category>vite</category>
         <category>dagre</category>
-        <category>websocket</category>
         <category>vue</category>
         <category>seo</category>
-        <category>MPC</category>
-        <category>EIP</category>
-        <category>Web3钱包</category>
-        <category>EIP-1559</category>
-        <category>EIP-404</category>
+        <category>websocket</category>
         <item>
-            <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/vueseo/</guid>
+            <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/vueseo/</guid>
             <title>prerender-spa-plugin Vue预渲染配合meta-info优化seo</title>
-            <link>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/vueseo/</link>
+            <link>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/vueseo/</link>
             <category>vue</category>
             <category>seo</category>
-            <pubDate>Tue, 13 Sep 2022 18:41:05 +0800</pubDate>
+            <pubDate>Wed, 27 Mar 2024 18:29:33 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;解决过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决过程&#34;&gt;#&lt;/a&gt; 解决过程&lt;/h2&gt;
 &lt;p&gt;先安装 prerender 和 puppeteer 插件  这个国外大神写的  github 地址就不附上了 (百度有)&lt;/p&gt;
 &lt;p&gt;cnpm install prerender-spa-plugin&lt;/p&gt;

@@ -573,6 +573,9 @@ details summary::before {
 .i-github:before {
   content: "\f1b4";
 }
+.i-telegram:before {
+  content: "\f063";
+}
 .i-twitter:before {
   content: "\f24d";
 }
@@ -2960,10 +2963,10 @@ main >.inner {
   color: #55acd5;
 }
 .social .item.telegram::before {
-  background-color: #ea716e;
+  background-color: #0088cc;
 }
 .social .item.telegram i {
-  color: #ea716e;
+  color: #0088cc;
 }
 .social .item:focus i,
 .social .item:hover i {

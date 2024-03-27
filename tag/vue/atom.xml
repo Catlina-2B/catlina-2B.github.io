@@ -3,30 +3,30 @@
     <id>https://github.com/Catlina-2B/catlina-2B.github.io</id>
     <title>DuoLa口袋不放糖 • Posts by &#34;vue&#34; tag</title>
     <link href="https://github.com/Catlina-2B/catlina-2B.github.io" />
-    <updated>2022-09-13T10:41:05.790Z</updated>
+    <updated>2024-03-27T10:29:33.527Z</updated>
     <category term="markdown" />
+    <category term="EIP" />
+    <category term="EIP-404" />
+    <category term="EIP-1559" />
     <category term="css" />
-    <category term="算法" />
     <category term="mac" />
     <category term="命令行" />
     <category term="Mac" />
+    <category term="MPC" />
+    <category term="Web3钱包" />
     <category term="nuxt" />
     <category term="node" />
     <category term="http" />
+    <category term="算法" />
     <category term="vite" />
     <category term="dagre" />
-    <category term="websocket" />
     <category term="vue" />
     <category term="seo" />
-    <category term="MPC" />
-    <category term="EIP" />
-    <category term="Web3钱包" />
-    <category term="EIP-1559" />
-    <category term="EIP-404" />
+    <category term="websocket" />
     <entry>
-        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/vueseo/</id>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/vueseo/</id>
         <title>prerender-spa-plugin Vue预渲染配合meta-info优化seo</title>
-        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/vueseo/"/>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/vueseo/"/>
         <content type="html">&lt;h2 id=&#34;解决过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决过程&#34;&gt;#&lt;/a&gt; 解决过程&lt;/h2&gt;
 &lt;p&gt;先安装 prerender 和 puppeteer 插件  这个国外大神写的  github 地址就不附上了 (百度有)&lt;/p&gt;
 &lt;p&gt;cnpm install prerender-spa-plugin&lt;/p&gt;
@@ -48,6 +48,6 @@
 </content>
         <category term="vue" />
         <category term="seo" />
-        <updated>2022-09-13T10:41:05.790Z</updated>
+        <updated>2024-03-27T10:29:33.527Z</updated>
     </entry>
 </feed>

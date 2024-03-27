@@ -24,13 +24,17 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
+  <meta name="keywords" content="nuxt" />
 
-<link rel="canonical" href="https://github.com/Catlina-2B/catlina-2B.github.io/tags/EIP-1559/">
+
+<link rel="canonical" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/nuxtFont/">
 
 
 
   <link ref="stylesheet  href="https://cdn.bootcss.com/mermaid/8.0.0/mermaid.min.css" />
-  <title>标签：EIP-1559 | Catlina = DuoLa口袋不放糖</title>
+  <title>
+nuxt引入字体问题 |
+Catlina = DuoLa口袋不放糖</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
@@ -57,9 +61,19 @@
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">
-    包含标签"EIP-1559"的文章
+  <h1 itemprop="name headline">nuxt引入字体问题
   </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-03-27 18:29:33">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-27T18:29:33+08:00">2024-03-27</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -89,12 +103,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/006HieLAly8ho4sstz8sqj308c04owed.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho4srvv33cj307w04x3yg.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho5lrjqzwvj307w04xq31.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/006HieLAly8ho4sa3vgatj31hc0u0q74.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/006HieLAly8ho4stkskm9j308c04ojrf.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho5lrcqh9hj308c04oq2z.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/006HieLAly8ho4sufiqs1j308c04ojrf.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/006HieLAly8ho5m4jhfwaj30o60dmwgq.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/006HieLAly8ho4su7ij77j30m80ci0ud.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho4sa3czlqj30ba06cwev.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/006HieLAly8ho4st7ymwej307w04xweg.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/006HieLAly8ho5lvkxc73j31hc0u0wkj.jpg"></li>
         </ul>
       </div>
     </header>
@@ -115,39 +129,128 @@
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="collapse wrap">
-    <h2 class="item header">
-      <a href="/tags">全部</a>
-      <small>/</small>
-      EIP-1559
-      <small>标签</small>
-    </h2>
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
 
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2024-03-26T22:25:00+08:00"
-                  content="2024-03-26">
-              2024-03-26
-            </time>
-                <span><a href="/categories/EIP/">EIP</a></span>
-          </div>
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-tw">
+  <link itemprop="mainEntityOfPage" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/nuxtFont/">
 
-          <div class="title">
-              <a href="/2024/03/26/eip1159/" itemprop="url">
-                <span itemprop="name">EIP-1559是什么?</span>
-              </a>
-          </div>
-        </article>
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/headImg.jpg">
+    <meta itemprop="name" content="Catlina">
+    <meta itemprop="description" content=", 人来人往，盼青龙上岸，只怪你我相见恨晚">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DuoLa口袋不放糖">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>nuxt 默认配置了 css 文件的 url-loader<br>
+scss 文件引入字体需要单独配置  build 中的 extend<br>
+ 具体如何配置  有待研究  暂且记录下这个问题</p>
+<p>这里顺便记录下中英文引用不同字体的问题<br>
+英文字体名字放前面，中文放后面  这是因为英文字体不识别中文字体  系统选择 font-family 时自动从前面开始一个个寻找<br>
+如果不识别自动跳过  因此大概代码如下：</p>
+<figure class="highlight css"><figcaption data-lang="CSS"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'英文'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'英文.ttf'</span><span class="token punctuation">)</span></span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'中文'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'中文.ttf'</span><span class="token punctuation">)</span></span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token selector">.body</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'英文'</span><span class="token punctuation">,</span> <span class="token string">'中文'</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>具体规则参考网址：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vZ29sb3ZpbmcvcC85NzIxMzI4Lmh0bWw=">https://www.cnblogs.com/goloving/p/9721328.html</span></p>
+
+      <div class="tags">
+          <a href="/tags/nuxt/" rel="tag"><i class="ic i-tag"></i> nuxt</a>
+      </div>
   </div>
 
+   <footer>
+
+    <div class="meta">
+  <span id="2024/03/27/nuxtFont/" class="item leancloud_visitors" data-flag-title="nuxt引入字体问题" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Catlina 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Catlina 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Catlina <i class="ic i-at"><em>@</em></i>DuoLa口袋不放糖
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/nuxtFont/" title="nuxt引入字体问题">https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/nuxtFont/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
   
 
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/03/27/optimization/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;006HieLAly8ho5lrjqzwvj307w04xq31.jpg" title="nuxt打包压缩代码">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>nuxt打包压缩代码</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/03/27/websocket/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx2.sinaimg.cn&#x2F;large&#x2F;006HieLAly8ho4sufiqs1j308c04ojrf.jpg" title="uni-app 真机测试 socketTask &#x3D; uni.connectSocket 可以成功，但是socketTask.onOpen 监听不到连接成功">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>uni-app 真机测试 socketTask = uni.connectSocket 可以成功，但是socketTask.onOpen 监听不到连接成功</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
 
 
         </div>
         <div id="sidebar">
           
+
 <div class="inner">
 
   <div class="panels">
@@ -234,14 +337,17 @@
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2024/03/27/optimization/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2024/03/27/websocket/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
 </div>
+
 
         </div>
         <div class="dimmer"></div>
@@ -258,30 +364,29 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Mac/" title="分类于 Mac">Mac</a>
+<a href="/categories/MPC/" title="分类于 MPC">MPC</a>
 </div>
 
-    <span><a href="/2022/09/09/macDeleteColors/" title="MacOS 删除相同的颜色描述文件">MacOS 删除相同的颜色描述文件</a></span>
+    <span><a href="/2024/03/24/okmpc/" title="OKX MPC wallet">OKX MPC wallet</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/EIP/" title="分类于 EIP">EIP</a>
 </div>
 
-    <span><a href="/2024/03/27/eip404/" title="EIP-404是什么?">EIP-404是什么?</a></span>
+    <span><a href="/2020/09/19/realSSO/" title="Node 实现单点登录 sso">Node 实现单点登录 sso</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/vite/" title="分类于 vite">vite</a>
+<a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="分类于 算法学习">算法学习</a>
 </div>
 
-    <span><a href="/2022/09/09/fontHex/" title="css某些字体中0x会变成0">css某些字体中0x会变成0</a></span>
+    <span><a href="/2022/04/03/twoPlus/" title="两数相加">两数相加</a></span>
   </li>
 
       
@@ -292,6 +397,15 @@
 </div>
 
     <span><a href="/2022/04/02/twoSum/" title="两数之和">两数之和</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2024/03/27/about/" title="关于Catlina">关于Catlina</a></span>
   </li>
 
       
@@ -310,15 +424,6 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/09/19/realSSO/" title="Node 实现单点登录 sso">Node 实现单点登录 sso</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2024/03/27/optimization/" title="nuxt打包压缩代码">nuxt打包压缩代码</a></span>
   </li>
 
@@ -328,17 +433,17 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2020/02/21/sso/" title="一步步实现一个单点登录（含后端）">一步步实现一个单点登录（含后端）</a></span>
+    <span><a href="/2024/03/27/vueseo/" title="prerender-spa-plugin Vue预渲染配合meta-info优化seo">prerender-spa-plugin Vue预渲染配合meta-info优化seo</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="分类于 算法学习">算法学习</a>
+<a href="/categories/Mac/" title="分类于 Mac">Mac</a>
 </div>
 
-    <span><a href="/2022/04/03/twoPlus/" title="两数相加">两数相加</a></span>
+    <span><a href="/2022/09/09/macDeleteColors/" title="MacOS 删除相同的颜色描述文件">MacOS 删除相同的颜色描述文件</a></span>
   </li>
 
       
@@ -348,7 +453,7 @@
 <a href="/categories/MPC/" title="分类于 MPC">MPC</a>
 </div>
 
-    <span><a href="/2024/03/25/mpc2/" title="多方安全计算-MPC">多方安全计算-MPC</a></span>
+    <span><a href="/2024/03/25/mpc/" title="MPC协议">MPC协议</a></span>
   </li>
 
   </ul>
@@ -379,7 +484,7 @@
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'tags/EIP-1559/',
+    path: '2024/03/27/nuxtFont/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"

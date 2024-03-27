@@ -27,13 +27,13 @@
   <meta name="keywords" content="nuxt" />
 
 
-<link rel="canonical" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/nuxtFont/">
+<link rel="canonical" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/optimization/">
 
 
 
   <link ref="stylesheet  href="https://cdn.bootcss.com/mermaid/8.0.0/mermaid.min.css" />
   <title>
-nuxt引入字体问题 |
+nuxt打包压缩代码 |
 Catlina = DuoLa口袋不放糖</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -61,16 +61,16 @@ Catlina = DuoLa口袋不放糖</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">nuxt引入字体问题
+  <h1 itemprop="name headline">nuxt打包压缩代码
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2022-09-13 18:41:05">
+  <span class="item" title="创建时间：2024-03-27 18:29:33">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">发表于</span>
-    <time itemprop="dateCreated datePublished" datetime="2022-09-13T18:41:05+08:00">2022-09-13</time>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-27T18:29:33+08:00">2024-03-27</time>
   </span>
 </div>
 
@@ -103,12 +103,12 @@ Catlina = DuoLa口袋不放糖</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho4sa3czlqj30ba06cwev.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/006HieLAly8ho5lvkxc73j31hc0u0wkj.jpg"></li>
           <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho5lrjqzwvj307w04xq31.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho5lrcqh9hj308c04oq2z.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho5lompv6ij308c04o3yk.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/006HieLAly8ho4sufiqs1j308c04ojrf.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/006HieLAly8ho4stkskm9j308c04ojrf.jpg"></li>
           <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/006HieLAly8ho4sstz8sqj308c04owed.jpg"></li>
-          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/006HieLAly8ho4sse55bij308c04oq2v.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/006HieLAly8ho5m4jhfwaj30o60dmwgq.jpg"></li>
         </ul>
       </div>
     </header>
@@ -137,7 +137,7 @@ Catlina = DuoLa口袋不放糖</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-tw">
-  <link itemprop="mainEntityOfPage" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/nuxtFont/">
+  <link itemprop="mainEntityOfPage" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/optimization/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/headImg.jpg">
@@ -152,13 +152,25 @@ Catlina = DuoLa口袋不放糖</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>nuxt 默认配置了 css 文件的 url-loader<br>
-scss 文件引入字体需要单独配置  build 中的 extend<br>
- 具体如何配置  有待研究  暂且记录下这个问题</p>
-<p>这里顺便记录下中英文引用不同字体的问题<br>
-英文字体名字放前面，中文放后面  这是因为英文字体不识别中文字体  系统选择 font-family 时自动从前面开始一个个寻找<br>
-如果不识别自动跳过  因此大概代码如下：</p>
-<figure class="highlight css"><figcaption data-lang="CSS"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'英文'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'英文.ttf'</span><span class="token punctuation">)</span></span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'中文'</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'中文.ttf'</span><span class="token punctuation">)</span></span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token selector">.body</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'英文'</span><span class="token punctuation">,</span> <span class="token string">'中文'</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>具体规则参考网址：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vZ29sb3ZpbmcvcC85NzIxMzI4Lmh0bWw=">https://www.cnblogs.com/goloving/p/9721328.html</span></p>
+    <p>webpack4 中使用 <font color="#FF0000" >uglifyjs-webpack-plugin</font> 来压缩代码会报错<br>
+网上有人说是<font color="#FF00FF" >uglifyjs</font>不支持 ES6 语法，babel 会把项目中的 es6 编译成 es5<br>
+ 但是 node_modules 中会存在 es6 的  而这里的代码 babel 并不会帮助一块编译  因此还是会报错</p>
+<p>这里是在 <span class="exturl" data-url="aHR0cHM6Ly96aC5udXh0anMub3JnLw==">nuxt</span> 开发中打包删除 console.log 和 debugger 遇到的<br>
+曾尝试将 <font color="#FF00FF" >uglifyjs-webpack-plugin</font> 放入 package.json 的开发模式所需插件中，也就是 --save–dev 安装<br>
+但是并没有用  由此看来不是这个方向的问题</p>
+<p>网上大神的解决方案：  手动设置 mode: ‘development’  将其设置为开发模式<br>
+这样就可以不添加任何代码就可以使用</p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token literal-property property">optimization</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token literal-property property">minimizer</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token keyword">new</span> <span class="token class-name">UglifyJsPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">]</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>掉了无数头发的我陷入了沉思：<br>
+我这个是 nuxt 项目  nuxt.config.js 里面设置 mode 应该是 spa  或者 universal  怎么可能设置为开发或生产模式呢？<br>
+于是我抛弃了这个思路  尝试从 nuxt 文档上找答案  功夫不负有心人<br>
+在 build 配置中发现了这个东西：</p>
+<h1>optimization</h1>
+<p>仔细看才发现  terser-webpack-plugin 这个插件  原来 nuxt 中压缩手段和 webpack4 还是有些许区别<br>
+可能是因为 nuxt 需要打包服务端的原因？（猜想）<br>
+所以才会将 webpack 的  UglifyJsPlugin () 这个插件封装了一层？<br>
+按照文档配置了下之后 npm run build  果然没问题了  谢天谢地  终于搞定了<br>
+这里附上文档网址：<span class="exturl" data-url="aHR0cHM6Ly96aC5udXh0anMub3JnL2FwaS9jb25maWd1cmF0aW9uLWJ1aWxkI29wdGltaXphdGlvbg==">https://zh.nuxtjs.org/api/configuration-build#optimization</span></p>
+<p>nuxt 的问题在网上很少  只能一点点自己摸索  还是要多看文档  多了解版本差异啊！</p>
 
       <div class="tags">
           <a href="/tags/nuxt/" rel="tag"><i class="ic i-tag"></i> nuxt</a>
@@ -168,6 +180,14 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
    <footer>
 
     <div class="meta">
+  <span id="2024/03/27/optimization/" class="item leancloud_visitors" data-flag-title="nuxt打包压缩代码" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
 </div>
 
       
@@ -197,7 +217,7 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/nuxtFont/" title="nuxt引入字体问题">https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/nuxtFont/</a>
+    <a href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/optimization/" title="nuxt打包压缩代码">https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/optimization/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -216,20 +236,20 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
     <div class="item left">
       
 
-  <a href="/2022/09/13/optimization/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;006HieLAly8ho4sa3czlqj30ba06cwev.jpg" title="nuxt打包压缩代码">
+  <a href="/2024/03/27/eip404/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx1.sinaimg.cn&#x2F;large&#x2F;006HieLAly8ho5ltl3sm3j31hc0u0agz.jpg" title="EIP-404是什么?">
   <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>nuxt打包压缩代码</h3>
+  <span class="category"><i class="ic i-flag"></i> EIP</span>
+  <h3>EIP-404是什么?</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="/2022/09/13/vueseo/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx3.sinaimg.cn&#x2F;large&#x2F;006HieLAly8ho5m0hgfldj30k00adq3z.jpg" title="prerender-spa-plugin Vue预渲染配合meta-info优化seo">
+  <a href="/2024/03/27/nuxtFont/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;006HieLAly8ho4sa3czlqj30ba06cwev.jpg" title="nuxt引入字体问题">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>prerender-spa-plugin Vue预渲染配合meta-info优化seo</h3>
+  <h3>nuxt引入字体问题</h3>
   </a>
 
     </div>
@@ -248,6 +268,7 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">optimization</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -262,7 +283,7 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">19</span>
+        <span class="count">20</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -284,7 +305,7 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
       <a href="https://github.com/catlina-2B" title="https:&#x2F;&#x2F;github.com&#x2F;catlina-2B" class="item github"><i class="ic i-github"></i></a>
       <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jYXRsaW5hMkI=" title="https:&#x2F;&#x2F;twitter.com&#x2F;catlina2B"><i class="ic i-twitter"></i></span>
       <a href="/Catlina1996@163.com" title="Catlina1996@163.com" class="item email"><i class="ic i-envelope"></i></a>
-      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL0NhdGxpbmE=" title="https:&#x2F;&#x2F;t.me&#x2F;Catlina"><i class="ic i-telegram"></i></span>
+      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL0NhdGxpbmEwMg==" title="https:&#x2F;&#x2F;t.me&#x2F;Catlina02"><i class="ic i-telegram"></i></span>
 </div>
 
 <ul class="menu">
@@ -329,12 +350,12 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2022/09/13/optimization/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/2024/03/27/eip404/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2022/09/13/vueseo/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+        <a href="/2024/03/27/nuxtFont/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -356,78 +377,19 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/MPC/" title="分类于 MPC">MPC</a>
-</div>
-
-    <span><a href="/2024/03/25/mpc/" title="MPC协议">MPC协议</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Mac/" title="分类于 Mac">Mac</a>
-</div>
-
-    <span><a href="/2022/09/09/macDeleteColors/" title="MacOS 删除相同的颜色描述文件">MacOS 删除相同的颜色描述文件</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/MPC/" title="分类于 MPC">MPC</a>
-</div>
-
-    <span><a href="/2024/03/25/mpc2/" title="多方安全计算-MPC">多方安全计算-MPC</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/02/21/sso/" title="一步步实现一个单点登录（含后端）">一步步实现一个单点登录（含后端）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2022/09/13/websocket/" title="uni-app 真机测试 socketTask &#x3D; uni.connectSocket 可以成功，但是socketTask.onOpen 监听不到连接成功">uni-app 真机测试 socketTask = uni.connectSocket 可以成功，但是socketTask.onOpen 监听不到连接成功</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/md%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99%E5%AD%A6%E4%B9%A0/" title="分类于 md文件编写学习">md文件编写学习</a>
-</div>
-
-    <span><a href="/2022/04/01/example/" title="例子">例子</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/" title="分类于 命令行">命令行</a>
 </div>
 
-    <span><a href="/2022/09/14/installBrew/" title="mac安装brew报错 fatal unable to access &#39;https:&#x2F;&#x2F;github.com&#x2F;Homebrew&#x2F;brew&#x2F;&#39;">mac安装brew报错 fatal unable to access 'https://github.com/Homebrew/brew/'</a></span>
+    <span><a href="/2022/09/14/installRedis/" title="mac使用brew安装redis报错：Failed to download resource &quot;ca-certificates&quot;">mac使用brew安装redis报错：Failed to download resource "ca-certificates"</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/MPC/" title="分类于 MPC">MPC</a>
 </div>
 
-    <span><a href="/2024/03/24/okmpc/" title="OKX MPC wallet">OKX MPC wallet</a></span>
+    <span><a href="/2024/03/27/vueseo/" title="prerender-spa-plugin Vue预渲染配合meta-info优化seo">prerender-spa-plugin Vue预渲染配合meta-info优化seo</a></span>
   </li>
 
       
@@ -444,10 +406,67 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/vite/" title="分类于 vite">vite</a>
+<a href="/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/" title="分类于 命令行">命令行</a>
 </div>
 
-    <span><a href="/2022/09/09/fontHex/" title="css某些字体中0x会变成0">css某些字体中0x会变成0</a></span>
+    <span><a href="/2022/09/14/installBrew/" title="mac安装brew报错 fatal unable to access &#39;https:&#x2F;&#x2F;github.com&#x2F;Homebrew&#x2F;brew&#x2F;&#39;">mac安装brew报错 fatal unable to access 'https://github.com/Homebrew/brew/'</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/md%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99%E5%AD%A6%E4%B9%A0/" title="分类于 md文件编写学习">md文件编写学习</a>
+</div>
+
+    <span><a href="/2022/04/01/example/" title="例子">例子</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2024/03/27/websocket/" title="uni-app 真机测试 socketTask &#x3D; uni.connectSocket 可以成功，但是socketTask.onOpen 监听不到连接成功">uni-app 真机测试 socketTask = uni.connectSocket 可以成功，但是socketTask.onOpen 监听不到连接成功</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/EIP/" title="分类于 EIP">EIP</a>
+</div>
+
+    <span><a href="/2024/03/26/eip1159/" title="EIP-1559是什么?">EIP-1559是什么?</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/09/19/realSSO/" title="Node 实现单点登录 sso">Node 实现单点登录 sso</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/EIP/" title="分类于 EIP">EIP</a>
+</div>
+
+    <span><a href="/2024/03/27/eip404/" title="EIP-404是什么?">EIP-404是什么?</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/02/21/sso/" title="一步步实现一个单点登录（含后端）">一步步实现一个单点登录（含后端）</a></span>
   </li>
 
   </ul>
@@ -478,7 +497,7 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2022/09/13/nuxtFont/',
+    path: '2024/03/27/optimization/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"
@@ -503,14 +522,6 @@ scss 文件引入字体需要单独配置  build 中的 extend<br>
 
 <script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
 <script src="//cdn.bootcss.com/mermaid/8.0.0/mermaid.min.js"></script>
-<% if (theme.mermaid.enable) { %>
-  <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({theme: 'forest'});
-    }
-  </script>
-<% } %>
 
 <script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
 

@@ -5,33 +5,33 @@
         <link>https://github.com/Catlina-2B/catlina-2B.github.io</link>
         <description>人来人往，盼青龙上岸，只怪你我相见恨晚</description>
         <language>zh-tw</language>
-        <pubDate>Tue, 13 Sep 2022 18:41:05 +0800</pubDate>
-        <lastBuildDate>Tue, 13 Sep 2022 18:41:05 +0800</lastBuildDate>
+        <pubDate>Wed, 27 Mar 2024 18:29:33 +0800</pubDate>
+        <lastBuildDate>Wed, 27 Mar 2024 18:29:33 +0800</lastBuildDate>
         <category>markdown</category>
+        <category>EIP</category>
+        <category>EIP-404</category>
+        <category>EIP-1559</category>
         <category>css</category>
-        <category>算法</category>
         <category>mac</category>
         <category>命令行</category>
         <category>Mac</category>
+        <category>MPC</category>
+        <category>Web3钱包</category>
         <category>nuxt</category>
         <category>node</category>
         <category>http</category>
+        <category>算法</category>
         <category>vite</category>
         <category>dagre</category>
-        <category>websocket</category>
         <category>vue</category>
         <category>seo</category>
-        <category>MPC</category>
-        <category>EIP</category>
-        <category>Web3钱包</category>
-        <category>EIP-1559</category>
-        <category>EIP-404</category>
+        <category>websocket</category>
         <item>
-            <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/nuxtFont/</guid>
+            <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/nuxtFont/</guid>
             <title>nuxt引入字体问题</title>
-            <link>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/nuxtFont/</link>
+            <link>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/nuxtFont/</link>
             <category>nuxt</category>
-            <pubDate>Tue, 13 Sep 2022 18:41:05 +0800</pubDate>
+            <pubDate>Wed, 27 Mar 2024 18:29:33 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;nuxt 默认配置了 css 文件的 url-loader&lt;br&gt;
 scss 文件引入字体需要单独配置  build 中的 extend&lt;br&gt;
  具体如何配置  有待研究  暂且记录下这个问题&lt;/p&gt;
@@ -42,11 +42,11 @@ scss 文件引入字体需要单独配置  build 中的 extend&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/optimization/</guid>
+            <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/optimization/</guid>
             <title>nuxt打包压缩代码</title>
-            <link>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/optimization/</link>
+            <link>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/optimization/</link>
             <category>nuxt</category>
-            <pubDate>Tue, 13 Sep 2022 18:41:05 +0800</pubDate>
+            <pubDate>Wed, 27 Mar 2024 18:29:33 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;webpack4 中使用 &lt;font color=&#34;#FF0000&#34; &gt;uglifyjs-webpack-plugin&lt;/font&gt; 来压缩代码会报错&lt;br&gt;
 网上有人说是&lt;font color=&#34;#FF00FF&#34; &gt;uglifyjs&lt;/font&gt;不支持 ES6 语法，babel 会把项目中的 es6 编译成 es5&lt;br&gt;
  但是 node_modules 中会存在 es6 的  而这里的代码 babel 并不会帮助一块编译  因此还是会报错&lt;/p&gt;
