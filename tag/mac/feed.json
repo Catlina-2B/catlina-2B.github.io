@@ -25,6 +25,16 @@
                 "mac",
                 "命令行"
             ]
+        },
+        {
+            "id": "https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/09/macDeleteColors/",
+            "url": "https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/09/macDeleteColors/",
+            "title": "MacOS 删除相同的颜色描述文件",
+            "date_published": "2022-09-09T09:13:00.000Z",
+            "content_html": "<p>Mac 电脑外接显示器用久了打开显示器设置里面，发现一堆相同的颜色描述文件，看着就很烦，查了下，这些文件是在外接显示器的时候自动生成的，在访达里面删除一个个的太麻烦了，推荐使用命令行打开 folder 直接批量删除掉</p>\n<p>路径：</p>\n<blockquote>\n<p>/Library/ColorSync/Profiles/Displays</p>\n</blockquote>\n<p>打开终端，执行命令：</p>\n<figure class=\"highlight bash\"><figcaption data-lang=\"bash\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre><span class=\"token function\">open</span> /Library/ColorSync/Profiles/Displays</pre></td></tr></table></figure><img data-src=\"/2022/09/09/macDeleteColors/screen.jpg\" class=\"\">\n<p>直接选中不需要的删除掉就行了</p>\n<p>mac 为什么会有这么让人难受的逻辑让人很费解🤔</p>\n",
+            "tags": [
+                "Mac"
+            ]
         }
     ]
 }

@@ -3,20 +3,170 @@
     <id>https://github.com/Catlina-2B/catlina-2B.github.io</id>
     <title>DuoLa口袋不放糖</title>
     <link href="https://github.com/Catlina-2B/catlina-2B.github.io" />
-    <updated>2022-09-14T14:30:00.000Z</updated>
-    <category term="算法" />
+    <updated>2024-03-27T06:03:00.000Z</updated>
     <category term="markdown" />
     <category term="css" />
+    <category term="算法" />
     <category term="mac" />
     <category term="命令行" />
+    <category term="Mac" />
     <category term="nuxt" />
     <category term="node" />
     <category term="http" />
     <category term="vite" />
     <category term="dagre" />
+    <category term="websocket" />
     <category term="vue" />
     <category term="seo" />
-    <category term="websocket" />
+    <category term="MPC" />
+    <category term="EIP" />
+    <category term="Web3钱包" />
+    <category term="EIP-1559" />
+    <category term="EIP-404" />
+    <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/eip404/</id>
+        <title>EIP-404是什么?</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/27/eip404/"/>
+        <content type="html">&lt;h1 id=&#34;爆火的pandora&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#爆火的pandora&#34;&gt;#&lt;/a&gt; 爆火的 Pandora&lt;/h1&gt;
+&lt;p&gt;提起 &lt;code&gt;EIP-404&lt;/code&gt; ，就不得不提起 2 月份爆火的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vcGVuc2VhLmlvL2NvbGxlY3Rpb24vcGFuZG9yYS1yZXBsaWNhbnRz&#34;&gt; Pandora&lt;/span&gt;， &lt;code&gt;Pandora&lt;/code&gt;  作为首个 ERC404 代币，单枚价格持续创新高，最高飙升至 $31,401，今天我们就聊聊他爆火的背后。&lt;/p&gt;
+&lt;h1 id=&#34;pandora和erc404背景&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#pandora和erc404背景&#34;&gt;#&lt;/a&gt; Pandora 和 ERC404 背景&lt;/h1&gt;
+&lt;p&gt;Pandora 是第一个基于 ERC404 代币标准构建的代币，该 ERC404 是为创作者和开发者等开源的实验性代币标准，也是混合 ERC20 / ERC721 实现，具有原生流动性和碎片化等特点。&lt;/p&gt;
+&lt;p&gt;Pandora 由 @maybectrlfreak（ctrl）和 @searnseele（Searn） 共同构建，核心标准 ERC404 由 Coinbase 前软件工程师 @0xacme（Acme）在 Github 上发布。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;@maybectrlfreak：也是投资初创 Syndicate 的天使投资人。Syndicate 推特 Profile 页面显示， Syndicate 首条推特发布于 1 月 22 日，对 BRC20 和 Ordinals 交易终端 BeFi Labs 进行了早期投资。此后，除与 BeFi Labs 相关内容之外，暂未发布其他内容。&lt;/li&gt;
+&lt;li&gt;@searnseele（Searn）&lt;/li&gt;
+&lt;li&gt;@0xacme（Acme）：Acme 未在推特简介中提及 Pandora，不过，其在 Github 上发布了 &lt;a href=&#34;https://github.com/0xacme/ERC404&#34;&gt;ERC404 标准&lt;/a&gt;。Acme 曾任职于 Coinbase。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;谈及 ERC404 的来源，就不得不提及之前  &lt;code&gt;EMERALD&lt;/code&gt;  合约被攻击。据 ctrl 描述，当时，任何人都可以从任何预定义的池中转移和耗尽资金。如果从池发送，则将绕过转移检查。这是代码中一个明显缺陷，看起来像是一个伪装成漏洞的 rug。再加上，代币转移逻辑非常复杂，导致 ERC20 和 ERC721 余额不匹配。ctrl 还因为此损失了 3 万美元，但其认为这个概念很有前景，并且确实有机会将其作为一种代币标准而存在。&lt;/p&gt;
+&lt;p&gt;因此，ctrl 和 Acme 在商量之后给  &lt;code&gt;EMERALD&lt;/code&gt;  开发者提供了问题修复建议，但  &lt;code&gt;EMERALD&lt;/code&gt;  开发者说其不是开发人员，而是使用了 ChatGPT。在沟通过程中， &lt;code&gt;EMERALD&lt;/code&gt;  开发者表明自己很穷，并且想要先快速启动一个 rug 续集。在这之后，ctrl、Acme 以及 Searn 决定自己重新推出，这也是 Pandora 的由来。&lt;/p&gt;
+&lt;h1 id=&#34;erc404-是什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#erc404-是什么&#34;&gt;#&lt;/a&gt; ERC404 是什么？&lt;/h1&gt;
+&lt;p&gt;ERC404 标准试图融合 ERC-20 标准和 ERC-721 标准的部分特性，通过 ERC-20 标准的代币可拆分性增加 ERC-721 标准 NFT 的流动性，目前还是一个实验性协议，很多 NFT 平台也从此衍生出 ERC-404-a 版本试图改善平台 NFT 的流动性问题。&lt;/p&gt;
+&lt;p&gt;不过，ERC404 标准文档也指出，这里的 ERC721 实现略微有些不标准，代币会根据底层 / 碎片化的转移而反复被销毁和铸造，目的是创建一种具有原生碎片化、流动性并鼓励交易来培育具有独特特征集的 NFT。即，如果出售 NFT，就不再拥有代币，如果出售代币，就不再拥有 NFT。&lt;/p&gt;
+&lt;h1 id=&#34;erc-404的实际流转&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#erc-404的实际流转&#34;&gt;#&lt;/a&gt; ERC-404 的实际流转&lt;/h1&gt;
+&lt;p&gt;我们还是拿 &lt;code&gt;Pandora&lt;/code&gt;  来说，2 月份 &lt;code&gt;Pandora&lt;/code&gt;  发行了 &lt;code&gt;10000&lt;/code&gt;  个 Replicant（即 &lt;code&gt;ERC-404&lt;/code&gt; ）Avatar NFT，上架到 uniswap，如下图所示，该系列存在五个稀有度等级，根据颜色区分。当用户与 Pandora ERC404 代币（而非 Replicant NFT）交互时，Replicant NFT 可能会被销毁，也可能随后重新生成。从流动性池购买的每个 Pandora 代币都会生成一个新的 Replicant。当 Pandora ERC404 被出售或转移时，其相应的 Replicant 将被销毁，并在接收地址生成一个新的 Replicant。每次 Replicant NFT 再生时，稀有度都会随机化。&lt;/p&gt;
+&lt;img data-src=&#34;/2024/03/27/eip404/box.jpg&#34; class=&#34;&#34;&gt;
+&lt;p&gt;对此，他的他的实际流转逻辑如下 (这块来自朋友&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbmJhbmcuZXRoLmxpbW8v&#34;&gt; anbang.eth&lt;/span&gt; 的总结)：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当用户地址少于 1 个代币的时候：只有币，没有图&lt;/li&gt;
+&lt;li&gt;当用户地址大于 1 个代币的时候：既有币，也有图&lt;/li&gt;
+&lt;li&gt;当用户买入代币，每凑满 1 个整数，就会铸造 1 个 NFT&lt;/li&gt;
+&lt;li&gt;当用户在 Uni 上购买 1 枚代币，用户除了得到代币外，还会收到一个生成的 NFT（ERC-721 标准），可以直接在 NFT 市场上交易&lt;/li&gt;
+&lt;li&gt;当用户地址恰好有一个代币：当卖出一部分的时候，会随机烧毁一个 NFT。（不能指定）&lt;/li&gt;
+&lt;li&gt;当用户在 Uni 上出售 1 枚代币，所拥有的 NFT 也随即被自动销毁&lt;/li&gt;
+&lt;li&gt;当用户将持有的 1 枚代币转账到新地址，原地址的 NFT 被销毁，新地址中会随即生成一个全新的随机 NFT&lt;/li&gt;
+&lt;li&gt;同理当从市场上购买一个 NFT 后，也会收到 1 个代币，出售这个 NFT 后，代币也会随即消失&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也就是说，ERC-404 代币在进行转账时，对方账户接收到的 NFT 的稀有度等级无法得到保证，有可能本身你拥有一个最稀有的 NFT，而转到对方账户时对方只能得到一个最普遍的 NFT，有利也有弊&lt;/p&gt;
+&lt;h2 id=&#34;利端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#利端&#34;&gt;#&lt;/a&gt; 利端&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;解决了 NFT 的流动性问题，因为当 1 枚 NFT 的价格过高，对于普通人来说都是望而却步&lt;/li&gt;
+&lt;li&gt;当筹集到 &lt;code&gt;1 ether&lt;/code&gt;  代币时随机铸造出来的 NFT 有可能直接让人得到最稀有的 NFT&lt;/li&gt;
+&lt;li&gt;同上所说，这种机制能激励用户在流动性池以外的第三方市场上进行交易，或者直接通过转账来刷新稀有度等级&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;弊端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#弊端&#34;&gt;#&lt;/a&gt; 弊端&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;沉重的内部交易逻辑使得交易所需 &lt;code&gt;GAS&lt;/code&gt;  费高于普通 NFT 交易，希望能得到改善优化&lt;/li&gt;
+&lt;li&gt;由于铸造的随机性，使得转账 NFT 时无法按照稀有度等级来抬高价格进行收益&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方案&#34;&gt;#&lt;/a&gt; 解决方案&lt;/h2&gt;
+&lt;p&gt;Pandora 将发布一项功能，允许用户存储 Replicant，这样以来，在转移 Pandora ERC404 时不会销毁或重新生成 Replicant，期待 ERC-404 接下来的发展&lt;/p&gt;
+</content>
+        <category term="EIP" />
+        <category term="EIP-404" />
+        <updated>2024-03-27T06:03:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/26/eip1159/</id>
+        <title>EIP-1559是什么?</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/26/eip1159/"/>
+        <content type="html">&lt;h2 id=&#34;以太坊中燃烧的eip-1559是什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#以太坊中燃烧的eip-1559是什么&#34;&gt;#&lt;/a&gt; 以太坊中燃烧的 EIP-1559 是什么？&lt;/h2&gt;
+&lt;p&gt;EIP-1559 本质上是关于以太坊网络交易定价机制的解决方案，它包括每区块网络费用的固定部分 &lt;code&gt;base fee&lt;/code&gt;  (也就是基础费用，会被销毁，矿工收不到这笔费用)，同时还有动态的可伸缩的区块大小设计，以应对瞬时的网络拥堵。虽然每区块的基础费用是固定的，但是它会根据网络的拥堵情况，调节每区块的基础费用，它有一个公式用来调整基础费用的上升或下降。它会根据上一个区块所用的 gas 和目标 gas ( &lt;code&gt;gas target&lt;/code&gt; ，也就是之前的 &lt;code&gt;gas limit&lt;/code&gt; ) 来调整。&lt;/p&gt;
+&lt;p&gt;当区块高于目标 gas 费 (用于衡量消息消耗的计算和存储资源的费用) 价格，基础费用上升，当区块低于目标 gas 价格，基础费用下降。在拥堵时，除了基础费用，还可以通过打赏费用 (小费) 来激励矿工将用户交易打包进区块。交易可以指定基础费用和小费的上限。&lt;/p&gt;
+&lt;p&gt;EIP-1559 这一提案还包括过渡性方案，开始时，区块的一半保留原来的竞价机制，一半采用新的费用机制，并逐渐过渡到新的方案。因此，在新规则里，基本费用会被销毁，矿工无法获得；矿工的收益主要是新增区块奖励 + 小费。&lt;/p&gt;
+&lt;h2 id=&#34;总结eip-1559协议内容主要有以下4点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#总结eip-1559协议内容主要有以下4点&#34;&gt;#&lt;/a&gt; 总结 EIP-1559 协议内容主要有以下 4 点：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;让所有的交易都尽可能支付相同的费率，提升用户体验。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实施弹性的区块大小限制机制，均衡化区块空间的使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提出用永久性区块补贴来激励矿工，提高网络安全性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;规定交易必须消耗特定数量的 ETH，增加经济抽象的难度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以太坊主网于区块高度  &lt;code&gt;12,965,000&lt;/code&gt;  完成伦敦硬分叉升级， EIP-1559 也随之生效，这也开始让以太坊网络根据交易需求和区块大小动态调整每笔交易的 Base Fee，而这部分的费用将直接燃烧销毁，数据显示，在伦敦硬分叉升级完的 13 个小时内， &lt;code&gt;燃烧以太坊3300&lt;/code&gt;  多枚。&lt;/p&gt;
+&lt;p&gt;所以，采用 EIP-1559 后，支付给矿工的费用预计将会减少，但这也使得共识算法从工作量证明机制 (PoW) 变成到股权证明机制 (PoS) 的想法更进一步。小结众所周知，分叉对于区块链来说，就相当于一个技术迭代的过程，随着人们不断发现区块链技术现有的限制，只有不断升级和扩展这项技术，才能让区块链技术走向成熟。&lt;/p&gt;
+&lt;p&gt;当然，这种分叉跟区块链不可篡改的特性正在背道而驰，但没有天生完美的技术，区块链也不例外，技术的发展如果在发生错误时都不可控，那这种技术就无法做到普世，人们对它的信任度也无法提升，且分叉的结果是由社区成员投票决定的，某种程度上来说依旧遵守着去中心化的原则。&lt;/p&gt;
+&lt;h2 id=&#34;最后记住&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#最后记住&#34;&gt;#&lt;/a&gt; 最后记住&lt;/h2&gt;
+&lt;p&gt;以太坊 EIP-1559 Gas 费计算主要包括： &lt;code&gt;基本费&lt;/code&gt; 、 &lt;code&gt;优先费&lt;/code&gt; 、 &lt;code&gt;最高费&lt;/code&gt;&lt;/p&gt;
+</content>
+        <category term="EIP" />
+        <category term="EIP-1559" />
+        <updated>2024-03-26T14:25:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/25/mpc2/</id>
+        <title>多方安全计算-MPC</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/25/mpc2/"/>
+        <content type="html">&lt;h1 id=&#34;多方安全计算-mpc-secure-multi-party-computation&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#多方安全计算-mpc-secure-multi-party-computation&#34;&gt;#&lt;/a&gt; 多方安全计算 - MPC（ Secure Multi-Party Computation ）&lt;/h1&gt;
+&lt;p&gt;多方安全计算 (MPC) 是在无可信第三方情况下，多个参与方协同完成计算目标，并保证每个参与者除计算结果外均不能得到其他参与实体的任何输入信息。多方安全计算问题最初起源于 1982 年姚期智院士提出的百万富翁问题，后来经过多年不断的发展，成为目前密码学的一个重要分支。多方安全计算是基于密码学的算法协议来实现隐私保护，常见的多方安全计算协议包括秘密共享（Secret Sharing，SS） 、混淆电路（Garbled Circuit，GC）、同态加密（Homomorphic Encryption，HE）、不经意传输（Oblivious Transfer，OT）等。多方安全计算技术可以获取数据使用价值，却不泄露原始数据内容，保护隐私，可适用于多方联合数据分析、数据安全查询（PIR，Private Information Retrieval）、隐私求交（PSI，rivate Set Intersection）、数据可信交换等应用场景。一系列用于 MPC 的开源库（例如 ABY、EMP-toolkit，FRESCO，JIFF 、MP-SPDZ，MPyC, SCALE-MAMBA，和 TinyGable 等) 得到了发展，进一步推动了 MPC 的应用和部署。&lt;/p&gt;
+&lt;p&gt;作者：京东云开发者&lt;br&gt;
+链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC83MTgyMDcyOTUzMjQzMTcyOTIz&#34;&gt;https://juejin.cn/post/7182072953243172923&lt;/span&gt;&lt;br&gt;
+ 来源：稀土掘金&lt;br&gt;
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
+</content>
+        <category term="MPC" />
+        <updated>2024-03-25T08:52:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/25/mpc/</id>
+        <title>MPC协议</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/25/mpc/"/>
+        <content type="html">&lt;h1 id=&#34;mpc介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mpc介绍&#34;&gt;#&lt;/a&gt; MPC 介绍&lt;/h1&gt;
+&lt;p&gt;安全多方计算（Secure Multi-Party Computation），记为 SMPC/ MPC，它是指在无可信第三方的情况下，多个参与方协同计算一个约定的函数。MPC 起源于姚期智先生于 1982 年提出的百万富翁问题及其密码学解法，后来不断发展和完善，已成为当前密码学的一个重要分支。&lt;br&gt;
+Safeheron Lab 一直以来深耕 MPC 研究，与姚期智院士创建的图灵研究院共建联合实验室，深度参与可信计算与区块链融合的研究，Safeheron Lab 已将部分 MPC 研究课题开源。&lt;br&gt;
+从 2018 年开始，MPC 技术被应用在区块链数字资产领域的私钥安全设计中。据不完全统计，4 年时间内，超过 3 万亿美元的数字资产转移通过 MPC 私钥方案签署完成，这一方案被纽约梅隆等上千家银行和顶级机构采用。2010 年后，MPC 开始越来越频繁地进入实用阶段。&lt;br&gt;
+目前 MPC 协议可以分成两大类：通用 MPC 协议和专用 MPC 协议。&lt;br&gt;
+通用 MPC 协议，顾名思义，具有通用性，理论上可支持任何计算任务。它一般基于混淆电路（Garbled Circuit）实现。具体实现步骤是将计算逻辑编译成电路，然后混淆执行。然而，随着问题的复杂化（大部分常见问题就很复杂），电路的规模也会迅速扩大，导致计算效率大大降低。&lt;br&gt;
+专用 MPC 协议则是指为解决特定问题所构造出的特殊 MPC 协议。由于是针对性构造并进行优化，专用算法的效率会比基于混淆电路的通用框架高很多。常见 MPC 专用算法包含，四则运算、比较运算、矩阵运算、隐私集合求交集、隐私数据查询、私钥门限签名等。&lt;br&gt;
+在实际应用场景中，人们常常会寻求快速高效的专用 MPC 协议。&lt;/p&gt;
+&lt;h1 id=&#34;区块链领域的-mpc-研究&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#区块链领域的-mpc-研究&#34;&gt;#&lt;/a&gt; 区块链领域的 MPC 研究&lt;/h1&gt;
+&lt;p&gt;随着研究的推进，一些重要的 MPC 多签协议相继被发表。在 MPC-ECDSA 研究方向，典型的有，Lin17 提出的关于 ECDSA 的两方签名算法和 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAxOS8xMTQucGRm&#34;&gt;GG18&lt;/span&gt; 提出的多方参与的门限签名协议。此后，算法协议层出不穷，比如 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAxOC80OTkucGRm&#34;&gt;DKLS18&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAxOS81MjMucGRm&#34;&gt;DKLS19&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAyMC81NDAucGRm&#34;&gt;GG20&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAyMC80OTIucGRm&#34;&gt;MPC-CMP&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAyMi8yOTcucGRm&#34;&gt;DMZ-21&lt;/span&gt; 等等。这些算法研究的重心在于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;减少通信次数&lt;/li&gt;
+&lt;li&gt;降低计算工作量&lt;/li&gt;
+&lt;li&gt;安全性分析与安全增强&lt;/li&gt;
+&lt;li&gt;增强对恶意敌手的识别能力&lt;/li&gt;
+&lt;li&gt;降低生成私钥的算力要求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;更快、更高效、更安全&lt;/code&gt; 始终是 MPC 研究的目标。&lt;/p&gt;
+&lt;h1 id=&#34;开源-mpc-ecdsa-协议&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#开源-mpc-ecdsa-协议&#34;&gt;#&lt;/a&gt; 开源 MPC-ECDSA 协议&lt;/h1&gt;
+&lt;p&gt;Safeheron 此次一共开源 3 种具有代表性的 MPC-ECDSA 协议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAxOS8xMTQucGRm&#34;&gt;GG18&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAyMC81NDAucGRm&#34;&gt;GG20&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAyMC80OTIucGRm&#34;&gt;MPC-CMP&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中， &lt;code&gt;GG18&lt;/code&gt;  是 Rosario Gennaro 和 Steven Goldfeder 提出来的，并且是第一个有影响力的、进入实用阶段的 MPC-ECDSA 门限多签协议。大部分后续提出的 MPC-ECDSA 门限多签协议，都可以看作是  &lt;code&gt;GG18&lt;/code&gt;  不同角度的优化版本。需要注意的是， &lt;code&gt;GG18&lt;/code&gt;  早期版本存在一些安全隐患，在安全分析报告的基础上，此次开源的算法对其进行了针对性的修正。&lt;/p&gt;
+</content>
+        <category term="MPC" />
+        <updated>2024-03-25T07:52:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/</id>
+        <title>OKX MPC wallet</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/"/>
+        <content type="html">&lt;p&gt;OKX 无私钥钱包基于 MPC 技术，将原本的 1 个完整私钥，变成 3 个各自生成的私钥碎片，分开存储，签名时使用其中 2 份私钥碎片即可完成签名，过程中不会产生完整的私钥。在创建无私钥钱包时，OKX 服务器生成一份私钥碎片 1，用户设备生成私钥碎片 2 和私钥碎片 3，其中私钥碎片 2 加密保存在用户设备上，私钥碎片 3 加密备份到 iCloud 或 Google Drive。交易签名时使用私钥碎片 1 + 私钥碎片 2，私钥碎片 3 用作备份。&lt;br&gt;
+此外，OKX 首创紧急出口功能，使用者可在紧急场景下，透过完全由自己管理的两个私钥分片（私钥碎片 2 和私钥碎片 3），即可导出私钥提走资产，实现了真正意义上的去中心化自托管无私钥钱包。使用 OKX 帐户即可轻松建立该钱包，无需再管理复杂的私钥或者助记词，非常注重用户体验&lt;/p&gt;
+</content>
+        <category term="MPC" />
+        <category term="Web3钱包" />
+        <updated>2024-03-24T04:10:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/14/installRedis/</id>
         <title>mac使用brew安装redis报错：Failed to download resource &#34;ca-certificates&#34;</title>
@@ -62,6 +212,30 @@
         <updated>2022-09-14T14:00:00.000Z</updated>
     </entry>
     <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/websocket/</id>
+        <title>uni-app 真机测试 socketTask = uni.connectSocket 可以成功，但是socketTask.onOpen 监听不到连接成功</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/websocket/"/>
+        <content type="html">&lt;h2 id=&#34;问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h2&gt;
+&lt;p&gt;后台采用 node + ts + &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NvY2tldC5pbw==&#34;&gt;socket.io&lt;/span&gt;&lt;br&gt;
+ 本地 demo 在浏览器运行没问题&lt;br&gt;
+在真机测试连接不上&lt;/p&gt;
+&lt;h2 id=&#34;ide版本号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ide版本号&#34;&gt;#&lt;/a&gt; IDE 版本号&lt;/h2&gt;
+&lt;p&gt;2.4.2.20191115&lt;/p&gt;
+&lt;h2 id=&#34;uniapp前端代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#uniapp前端代码&#34;&gt;#&lt;/a&gt; uniapp 前端代码&lt;/h2&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; msg &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; ‘要发送的数据’&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; SocketTask1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; uni&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;connectSocket&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token literal-property property&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;ws://localhost:3000/ws&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token function-variable function&#34;&gt;success&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;stringify&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;SocketTask1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onOpen&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;连接成功&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  SocketTask1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;send&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token literal-property property&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; msg&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;success&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;发送成功&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;res&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;fail&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;err&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;发送失败&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;SocketTask1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onMessage&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;接收数据&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;SocketTask1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onError&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;连接错误&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;SocketTask1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onClose&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;连接关闭&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;解决过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决过程&#34;&gt;#&lt;/a&gt; 解决过程&lt;/h2&gt;
+&lt;p&gt;经过反复排查问题所在  最终确定问题出现在连接问题上&lt;br&gt;
+因此调用了其他 ws 接口  发现并没有问题&lt;br&gt;
+笔者这里后台使用的是 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NvY2tldC5pbw==&#34;&gt;socket.io&lt;/span&gt; ，后台 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NvY2tldC5pbw==&#34;&gt;socket.io&lt;/span&gt; 模块换成了 websocket&lt;br&gt;
+ 测试  完美 连接上了～&lt;/p&gt;
+&lt;h2 id=&#34;结论&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#结论&#34;&gt;#&lt;/a&gt; 结论&lt;/h2&gt;
+&lt;p&gt;uniapp 的 socketTask 方法是基于 websocket 建立的连接&lt;br&gt;
+而 websocket 是基于 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NvY2tldC5pbw==&#34;&gt;socket.io&lt;/span&gt; 开发出来使用 web 端的一个模块  双方有共同性但不具备联系性&lt;br&gt;
+因此前后端使用 websocket 需注意是否一致&lt;/p&gt;
+</content>
+        <category term="websocket" />
+        <updated>2022-09-13T10:41:05.790Z</updated>
+    </entry>
+    <entry>
         <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/vueseo/</id>
         <title>prerender-spa-plugin Vue预渲染配合meta-info优化seo</title>
         <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/vueseo/"/>
@@ -86,30 +260,6 @@
 </content>
         <category term="vue" />
         <category term="seo" />
-        <updated>2022-09-13T10:41:05.790Z</updated>
-    </entry>
-    <entry>
-        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/websocket/</id>
-        <title>uni-app 真机测试 socketTask = uni.connectSocket 可以成功，但是socketTask.onOpen 监听不到连接成功</title>
-        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/websocket/"/>
-        <content type="html">&lt;h2 id=&#34;问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h2&gt;
-&lt;p&gt;后台采用 node + ts + &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NvY2tldC5pbw==&#34;&gt;socket.io&lt;/span&gt;&lt;br&gt;
- 本地 demo 在浏览器运行没问题&lt;br&gt;
-在真机测试连接不上&lt;/p&gt;
-&lt;h2 id=&#34;ide版本号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ide版本号&#34;&gt;#&lt;/a&gt; IDE 版本号&lt;/h2&gt;
-&lt;p&gt;2.4.2.20191115&lt;/p&gt;
-&lt;h2 id=&#34;uniapp前端代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#uniapp前端代码&#34;&gt;#&lt;/a&gt; uniapp 前端代码&lt;/h2&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;figcaption data-lang=&#34;javascript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; msg &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; ‘要发送的数据’&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; SocketTask1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; uni&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;connectSocket&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token literal-property property&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;ws://localhost:3000/ws&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token function-variable function&#34;&gt;success&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;stringify&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;SocketTask1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onOpen&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;连接成功&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  SocketTask1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;send&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token literal-property property&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; msg&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;success&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;发送成功&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;res&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token function&#34;&gt;fail&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;err&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;发送失败&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;err&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;SocketTask1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onMessage&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;接收数据&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;SocketTask1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onError&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;连接错误&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;SocketTask1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onClose&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;连接关闭&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;解决过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决过程&#34;&gt;#&lt;/a&gt; 解决过程&lt;/h2&gt;
-&lt;p&gt;经过反复排查问题所在  最终确定问题出现在连接问题上&lt;br&gt;
-因此调用了其他 ws 接口  发现并没有问题&lt;br&gt;
-笔者这里后台使用的是 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NvY2tldC5pbw==&#34;&gt;socket.io&lt;/span&gt; ，后台 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NvY2tldC5pbw==&#34;&gt;socket.io&lt;/span&gt; 模块换成了 websocket&lt;br&gt;
- 测试  完美 连接上了～&lt;/p&gt;
-&lt;h2 id=&#34;结论&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#结论&#34;&gt;#&lt;/a&gt; 结论&lt;/h2&gt;
-&lt;p&gt;uniapp 的 socketTask 方法是基于 websocket 建立的连接&lt;br&gt;
-而 websocket 是基于 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NvY2tldC5pbw==&#34;&gt;socket.io&lt;/span&gt; 开发出来使用 web 端的一个模块  双方有共同性但不具备联系性&lt;br&gt;
-因此前后端使用 websocket 需注意是否一致&lt;/p&gt;
-</content>
-        <category term="websocket" />
         <updated>2022-09-13T10:41:05.790Z</updated>
     </entry>
     <entry>
@@ -176,6 +326,23 @@ scss 文件引入字体需要单独配置  build 中的 extend&lt;br&gt;
         <updated>2022-09-09T09:13:00.000Z</updated>
     </entry>
     <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/09/macDeleteColors/</id>
+        <title>MacOS 删除相同的颜色描述文件</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/09/macDeleteColors/"/>
+        <content type="html">&lt;p&gt;Mac 电脑外接显示器用久了打开显示器设置里面，发现一堆相同的颜色描述文件，看着就很烦，查了下，这些文件是在外接显示器的时候自动生成的，在访达里面删除一个个的太麻烦了，推荐使用命令行打开 folder 直接批量删除掉&lt;/p&gt;
+&lt;p&gt;路径：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/Library/ColorSync/Profiles/Displays&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;打开终端，执行命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;open&lt;/span&gt; /Library/ColorSync/Profiles/Displays&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;img data-src=&#34;/2022/09/09/macDeleteColors/screen.jpg&#34; class=&#34;&#34;&gt;
+&lt;p&gt;直接选中不需要的删除掉就行了&lt;/p&gt;
+&lt;p&gt;mac 为什么会有这么让人难受的逻辑让人很费解🤔&lt;/p&gt;
+</content>
+        <category term="Mac" />
+        <updated>2022-09-09T09:13:00.000Z</updated>
+    </entry>
+    <entry>
         <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/09/viteDagre/</id>
         <title>vite 中使用 dagre-d3 报错</title>
         <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/09/viteDagre/"/>
@@ -219,15 +386,6 @@ scss 文件引入字体需要单独配置  build 中的 extend&lt;br&gt;
         <category term="vite" />
         <category term="dagre" />
         <updated>2022-09-09T09:13:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/04/05/binarySearch/</id>
-        <title>二分查找</title>
-        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/04/05/binarySearch/"/>
-        <content type="html">&lt;h1&gt;学算法&lt;/h1&gt;
-</content>
-        <category term="算法" />
-        <updated>2022-04-05T10:58:00.000Z</updated>
     </entry>
     <entry>
         <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/04/03/twoPlus/</id>

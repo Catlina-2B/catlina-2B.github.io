@@ -1,0 +1,553 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="DuoLa口袋不放糖" href="https://github.com/Catlina-2B/catlina-2B.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="DuoLa口袋不放糖" href="https://github.com/Catlina-2B/catlina-2B.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="DuoLa口袋不放糖" href="https://github.com/Catlina-2B/catlina-2B.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="EIP,EIP-1559" />
+
+
+<link rel="canonical" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/26/eip1159/">
+
+
+
+  <link ref="stylesheet  href="https://cdn.bootcss.com/mermaid/8.0.0/mermaid.min.css" />
+  <title>
+EIP-1559是什么? - EIP |
+Catlina = DuoLa口袋不放糖</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">EIP-1559是什么?
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-03-26 22:25:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-26T22:25:00+08:00">2024-03-26</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Catlina</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho5lzn1s51j30yk0jgn0d.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/006HieLAly8ho5m4jhfwaj30o60dmwgq.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho4srvv33cj307w04x3yg.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/006HieLAly8ho5lz1ci40j316o0o0q61.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/006HieLAly8ho4st7ymwej307w04xweg.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/006HieLAly8ho4sa3vgatj31hc0u0q74.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/EIP/" itemprop="item" rel="index" title="分类于 EIP"><span itemprop="name">EIP</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-tw">
+  <link itemprop="mainEntityOfPage" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/26/eip1159/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/headImg.jpg">
+    <meta itemprop="name" content="Catlina">
+    <meta itemprop="description" content=", 人来人往，盼青龙上岸，只怪你我相见恨晚">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DuoLa口袋不放糖">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="以太坊中燃烧的eip-1559是什么"><a class="markdownIt-Anchor" href="#以太坊中燃烧的eip-1559是什么">#</a> 以太坊中燃烧的 EIP-1559 是什么？</h2>
+<p>EIP-1559 本质上是关于以太坊网络交易定价机制的解决方案，它包括每区块网络费用的固定部分 <code>base fee</code>  (也就是基础费用，会被销毁，矿工收不到这笔费用)，同时还有动态的可伸缩的区块大小设计，以应对瞬时的网络拥堵。虽然每区块的基础费用是固定的，但是它会根据网络的拥堵情况，调节每区块的基础费用，它有一个公式用来调整基础费用的上升或下降。它会根据上一个区块所用的 gas 和目标 gas ( <code>gas target</code> ，也就是之前的 <code>gas limit</code> ) 来调整。</p>
+<p>当区块高于目标 gas 费 (用于衡量消息消耗的计算和存储资源的费用) 价格，基础费用上升，当区块低于目标 gas 价格，基础费用下降。在拥堵时，除了基础费用，还可以通过打赏费用 (小费) 来激励矿工将用户交易打包进区块。交易可以指定基础费用和小费的上限。</p>
+<p>EIP-1559 这一提案还包括过渡性方案，开始时，区块的一半保留原来的竞价机制，一半采用新的费用机制，并逐渐过渡到新的方案。因此，在新规则里，基本费用会被销毁，矿工无法获得；矿工的收益主要是新增区块奖励 + 小费。</p>
+<h2 id="总结eip-1559协议内容主要有以下4点"><a class="markdownIt-Anchor" href="#总结eip-1559协议内容主要有以下4点">#</a> 总结 EIP-1559 协议内容主要有以下 4 点：</h2>
+<ul>
+<li>
+<p>让所有的交易都尽可能支付相同的费率，提升用户体验。</p>
+</li>
+<li>
+<p>实施弹性的区块大小限制机制，均衡化区块空间的使用。</p>
+</li>
+<li>
+<p>提出用永久性区块补贴来激励矿工，提高网络安全性。</p>
+</li>
+<li>
+<p>规定交易必须消耗特定数量的 ETH，增加经济抽象的难度。</p>
+</li>
+</ul>
+<p>以太坊主网于区块高度  <code>12,965,000</code>  完成伦敦硬分叉升级， EIP-1559 也随之生效，这也开始让以太坊网络根据交易需求和区块大小动态调整每笔交易的 Base Fee，而这部分的费用将直接燃烧销毁，数据显示，在伦敦硬分叉升级完的 13 个小时内， <code>燃烧以太坊3300</code>  多枚。</p>
+<p>所以，采用 EIP-1559 后，支付给矿工的费用预计将会减少，但这也使得共识算法从工作量证明机制 (PoW) 变成到股权证明机制 (PoS) 的想法更进一步。小结众所周知，分叉对于区块链来说，就相当于一个技术迭代的过程，随着人们不断发现区块链技术现有的限制，只有不断升级和扩展这项技术，才能让区块链技术走向成熟。</p>
+<p>当然，这种分叉跟区块链不可篡改的特性正在背道而驰，但没有天生完美的技术，区块链也不例外，技术的发展如果在发生错误时都不可控，那这种技术就无法做到普世，人们对它的信任度也无法提升，且分叉的结果是由社区成员投票决定的，某种程度上来说依旧遵守着去中心化的原则。</p>
+<h2 id="最后记住"><a class="markdownIt-Anchor" href="#最后记住">#</a> 最后记住</h2>
+<p>以太坊 EIP-1559 Gas 费计算主要包括： <code>基本费</code> 、 <code>优先费</code> 、 <code>最高费</code></p>
+
+      <div class="tags">
+          <a href="/tags/EIP/" rel="tag"><i class="ic i-tag"></i> EIP</a>
+          <a href="/tags/EIP-1559/" rel="tag"><i class="ic i-tag"></i> EIP-1559</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-03-26 22:36:48" itemprop="dateModified" datetime="2024-03-26T22:36:48+08:00">2024-03-26</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Catlina 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Catlina 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Catlina <i class="ic i-at"><em>@</em></i>DuoLa口袋不放糖
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/26/eip1159/" title="EIP-1559是什么?">https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/26/eip1159/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/03/25/mpc2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;006HieLAly8ho4sa3czlqj30ba06cwev.jpg" title="多方安全计算-MPC">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> MPC</span>
+  <h3>多方安全计算-MPC</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/03/27/eip404/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx4.sinaimg.cn&#x2F;large&#x2F;006HieLAly8ho4styftr8j30e8080abl.jpg" title="EIP-404是什么?">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> EIP</span>
+  <h3>EIP-404是什么?</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%B8%AD%E7%87%83%E7%83%A7%E7%9A%84eip-1559%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.</span> <span class="toc-text"> 以太坊中燃烧的 EIP-1559 是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93eip-1559%E5%8D%8F%E8%AE%AE%E5%86%85%E5%AE%B9%E4%B8%BB%E8%A6%81%E6%9C%89%E4%BB%A5%E4%B8%8B4%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text"> 总结 EIP-1559 协议内容主要有以下 4 点：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E8%AE%B0%E4%BD%8F"><span class="toc-number">3.</span> <span class="toc-text"> 最后记住</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2024/03/26/eip1159/" rel="bookmark" title="EIP-1559是什么?">EIP-1559是什么?</a></li><li><a href="/2024/03/27/eip404/" rel="bookmark" title="EIP-404是什么?">EIP-404是什么?</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Catlina"
+      data-src="/images/headImg.jpg">
+  <p class="name" itemprop="name">Catlina</p>
+  <div class="description" itemprop="description">人来人往，盼青龙上岸，只怪你我相见恨晚</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">19</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">7</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">19</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <a href="https://github.com/catlina-2B" title="https:&#x2F;&#x2F;github.com&#x2F;catlina-2B" class="item github"><i class="ic i-github"></i></a>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jYXRsaW5hMkI=" title="https:&#x2F;&#x2F;twitter.com&#x2F;catlina2B"><i class="ic i-twitter"></i></span>
+      <a href="/Catlina1996@163.com" title="Catlina1996@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL0NhdGxpbmE=" title="https:&#x2F;&#x2F;t.me&#x2F;Catlina"><i class="ic i-telegram"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/03/25/mpc2/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/03/27/eip404/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Mac/" title="分类于 Mac">Mac</a>
+</div>
+
+    <span><a href="/2022/09/09/macDeleteColors/" title="MacOS 删除相同的颜色描述文件">MacOS 删除相同的颜色描述文件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="分类于 算法学习">算法学习</a>
+</div>
+
+    <span><a href="/2022/04/03/twoPlus/" title="两数相加">两数相加</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/09/13/optimization/" title="nuxt打包压缩代码">nuxt打包压缩代码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/" title="分类于 命令行">命令行</a>
+</div>
+
+    <span><a href="/2022/09/14/installRedis/" title="mac使用brew安装redis报错：Failed to download resource &quot;ca-certificates&quot;">mac使用brew安装redis报错：Failed to download resource "ca-certificates"</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vite/" title="分类于 vite">vite</a>
+</div>
+
+    <span><a href="/2022/09/09/viteDagre/" title="vite 中使用 dagre-d3 报错">vite 中使用 dagre-d3 报错</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/09/13/nuxtFont/" title="nuxt引入字体问题">nuxt引入字体问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MPC/" title="分类于 MPC">MPC</a>
+</div>
+
+    <span><a href="/2024/03/25/mpc2/" title="多方安全计算-MPC">多方安全计算-MPC</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/02/21/sso/" title="一步步实现一个单点登录（含后端）">一步步实现一个单点登录（含后端）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="分类于 算法学习">算法学习</a>
+</div>
+
+    <span><a href="/2022/04/02/twoSum/" title="两数之和">两数之和</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MPC/" title="分类于 MPC">MPC</a>
+</div>
+
+    <span><a href="/2024/03/25/mpc/" title="MPC协议">MPC协议</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Catlina @ Catlina</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<a href="https://github.com/amehime/hexo-theme-shoka">Shoka</a>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/03/26/eip1159/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+<script src="//cdn.bootcss.com/mermaid/8.0.0/mermaid.min.js"></script>
+<% if (theme.mermaid.enable) { %>
+  <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+<% } %>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":245,"height":515,"hOffset":50},"mobile":{"show":true,"scale":0.6},"react":{"opacity":0.8},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

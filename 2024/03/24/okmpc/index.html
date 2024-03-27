@@ -1,0 +1,530 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="DuoLa口袋不放糖" href="https://github.com/Catlina-2B/catlina-2B.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="DuoLa口袋不放糖" href="https://github.com/Catlina-2B/catlina-2B.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="DuoLa口袋不放糖" href="https://github.com/Catlina-2B/catlina-2B.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="MPC,Web3钱包" />
+
+
+<link rel="canonical" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/">
+
+
+
+  <link ref="stylesheet  href="https://cdn.bootcss.com/mermaid/8.0.0/mermaid.min.css" />
+  <title>
+OKX MPC wallet - MPC |
+Catlina = DuoLa口袋不放糖</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">OKX MPC wallet
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-03-24 12:10:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-24T12:10:00+08:00">2024-03-24</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Catlina</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://dlink.host/wx1.sinaimg.cn/large/006HieLAly8ho5m3r9028j30e805z752.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/006HieLAly8ho5m0hgfldj30k00adq3z.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx4.sinaimg.cn/large/006HieLAly8ho5lompv6ij308c04o3yk.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx2.sinaimg.cn/large/006HieLAly8ho4sa4ljljj30c5096aa9.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/006HieLAly8ho4sstz8sqj308c04owed.jpg"></li>
+          <li class="item" data-background-image="https://dlink.host/wx3.sinaimg.cn/large/006HieLAly8ho4sse55bij308c04oq2v.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MPC/" itemprop="item" rel="index" title="分类于 MPC"><span itemprop="name">MPC</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-tw">
+  <link itemprop="mainEntityOfPage" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/headImg.jpg">
+    <meta itemprop="name" content="Catlina">
+    <meta itemprop="description" content=", 人来人往，盼青龙上岸，只怪你我相见恨晚">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="DuoLa口袋不放糖">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>OKX 无私钥钱包基于 MPC 技术，将原本的 1 个完整私钥，变成 3 个各自生成的私钥碎片，分开存储，签名时使用其中 2 份私钥碎片即可完成签名，过程中不会产生完整的私钥。在创建无私钥钱包时，OKX 服务器生成一份私钥碎片 1，用户设备生成私钥碎片 2 和私钥碎片 3，其中私钥碎片 2 加密保存在用户设备上，私钥碎片 3 加密备份到 iCloud 或 Google Drive。交易签名时使用私钥碎片 1 + 私钥碎片 2，私钥碎片 3 用作备份。<br>
+此外，OKX 首创紧急出口功能，使用者可在紧急场景下，透过完全由自己管理的两个私钥分片（私钥碎片 2 和私钥碎片 3），即可导出私钥提走资产，实现了真正意义上的去中心化自托管无私钥钱包。使用 OKX 帐户即可轻松建立该钱包，无需再管理复杂的私钥或者助记词，非常注重用户体验</p>
+
+      <div class="tags">
+          <a href="/tags/MPC/" rel="tag"><i class="ic i-tag"></i> MPC</a>
+          <a href="/tags/Web3%E9%92%B1%E5%8C%85/" rel="tag"><i class="ic i-tag"></i> Web3钱包</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-03-26 22:24:58" itemprop="dateModified" datetime="2024-03-26T22:24:58+08:00">2024-03-26</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Catlina 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Catlina 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Catlina <i class="ic i-at"><em>@</em></i>DuoLa口袋不放糖
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/" title="OKX MPC wallet">https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/09/14/installRedis/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx3.sinaimg.cn&#x2F;large&#x2F;006HieLAly8ho4sstz8sqj308c04owed.jpg" title="mac使用brew安装redis报错：Failed to download resource &quot;ca-certificates&quot;">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 命令行</span>
+  <h3>mac使用brew安装redis报错：Failed to download resource "ca-certificates"</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/03/25/mpc/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;dlink.host&#x2F;wx3.sinaimg.cn&#x2F;large&#x2F;006HieLAly8ho5m0hgfldj30k00adq3z.jpg" title="MPC协议">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> MPC</span>
+  <h3>MPC协议</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2024/03/24/okmpc/" rel="bookmark" title="OKX MPC wallet">OKX MPC wallet</a></li><li><a href="/2024/03/25/mpc/" rel="bookmark" title="MPC协议">MPC协议</a></li><li><a href="/2024/03/25/mpc2/" rel="bookmark" title="多方安全计算-MPC">多方安全计算-MPC</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Catlina"
+      data-src="/images/headImg.jpg">
+  <p class="name" itemprop="name">Catlina</p>
+  <div class="description" itemprop="description">人来人往，盼青龙上岸，只怪你我相见恨晚</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">19</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">7</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">19</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <a href="https://github.com/catlina-2B" title="https:&#x2F;&#x2F;github.com&#x2F;catlina-2B" class="item github"><i class="ic i-github"></i></a>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jYXRsaW5hMkI=" title="https:&#x2F;&#x2F;twitter.com&#x2F;catlina2B"><i class="ic i-twitter"></i></span>
+      <a href="/Catlina1996@163.com" title="Catlina1996@163.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL0NhdGxpbmE=" title="https:&#x2F;&#x2F;t.me&#x2F;Catlina"><i class="ic i-telegram"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/09/14/installRedis/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/03/25/mpc/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" title="分类于 算法学习">算法学习</a>
+</div>
+
+    <span><a href="/2022/04/03/twoPlus/" title="两数相加">两数相加</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/09/13/nuxtFont/" title="nuxt引入字体问题">nuxt引入字体问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/" title="分类于 命令行">命令行</a>
+</div>
+
+    <span><a href="/2022/09/14/installBrew/" title="mac安装brew报错 fatal unable to access &#39;https:&#x2F;&#x2F;github.com&#x2F;Homebrew&#x2F;brew&#x2F;&#39;">mac安装brew报错 fatal unable to access 'https://github.com/Homebrew/brew/'</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MPC/" title="分类于 MPC">MPC</a>
+</div>
+
+    <span><a href="/2024/03/25/mpc/" title="MPC协议">MPC协议</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MPC/" title="分类于 MPC">MPC</a>
+</div>
+
+    <span><a href="/2024/03/25/mpc2/" title="多方安全计算-MPC">多方安全计算-MPC</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/09/13/vueseo/" title="prerender-spa-plugin Vue预渲染配合meta-info优化seo">prerender-spa-plugin Vue预渲染配合meta-info优化seo</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Mac/" title="分类于 Mac">Mac</a>
+</div>
+
+    <span><a href="/2022/09/09/macDeleteColors/" title="MacOS 删除相同的颜色描述文件">MacOS 删除相同的颜色描述文件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/vite/" title="分类于 vite">vite</a>
+</div>
+
+    <span><a href="/2022/09/09/fontHex/" title="css某些字体中0x会变成0">css某些字体中0x会变成0</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/02/21/sso/" title="一步步实现一个单点登录（含后端）">一步步实现一个单点登录（含后端）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/" title="分类于 命令行">命令行</a>
+</div>
+
+    <span><a href="/2022/09/14/installRedis/" title="mac使用brew安装redis报错：Failed to download resource &quot;ca-certificates&quot;">mac使用brew安装redis报错：Failed to download resource "ca-certificates"</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Catlina @ Catlina</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<a href="https://github.com/amehime/hexo-theme-shoka">Shoka</a>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/03/24/okmpc/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+<script src="//cdn.bootcss.com/mermaid/8.0.0/mermaid.min.js"></script>
+<% if (theme.mermaid.enable) { %>
+  <script src='https://unpkg.com/mermaid@<%= theme.mermaid.version %>/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+<% } %>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":245,"height":515,"hOffset":50},"mobile":{"show":true,"scale":0.6},"react":{"opacity":0.8},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

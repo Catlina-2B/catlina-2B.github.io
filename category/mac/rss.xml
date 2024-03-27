@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>DuoLa口袋不放糖 • Posts by &#34;mac&#34; category</title>
+        <link>https://github.com/Catlina-2B/catlina-2B.github.io</link>
+        <description>人来人往，盼青龙上岸，只怪你我相见恨晚</description>
+        <language>zh-tw</language>
+        <pubDate>Fri, 09 Sep 2022 17:13:00 +0800</pubDate>
+        <lastBuildDate>Fri, 09 Sep 2022 17:13:00 +0800</lastBuildDate>
+        <category>markdown</category>
+        <category>css</category>
+        <category>算法</category>
+        <category>mac</category>
+        <category>命令行</category>
+        <category>Mac</category>
+        <category>nuxt</category>
+        <category>node</category>
+        <category>http</category>
+        <category>vite</category>
+        <category>dagre</category>
+        <category>websocket</category>
+        <category>vue</category>
+        <category>seo</category>
+        <category>MPC</category>
+        <category>EIP</category>
+        <category>Web3钱包</category>
+        <category>EIP-1559</category>
+        <category>EIP-404</category>
+        <item>
+            <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/09/macDeleteColors/</guid>
+            <title>MacOS 删除相同的颜色描述文件</title>
+            <link>https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/09/macDeleteColors/</link>
+            <category>Mac</category>
+            <pubDate>Fri, 09 Sep 2022 17:13:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;Mac 电脑外接显示器用久了打开显示器设置里面，发现一堆相同的颜色描述文件，看着就很烦，查了下，这些文件是在外接显示器的时候自动生成的，在访达里面删除一个个的太麻烦了，推荐使用命令行打开 folder 直接批量删除掉&lt;/p&gt;
+&lt;p&gt;路径：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/Library/ColorSync/Profiles/Displays&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;打开终端，执行命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;open&lt;/span&gt; /Library/ColorSync/Profiles/Displays&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;img data-src=&#34;/2022/09/09/macDeleteColors/screen.jpg&#34; class=&#34;&#34;&gt;
+&lt;p&gt;直接选中不需要的删除掉就行了&lt;/p&gt;
+&lt;p&gt;mac 为什么会有这么让人难受的逻辑让人很费解🤔&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

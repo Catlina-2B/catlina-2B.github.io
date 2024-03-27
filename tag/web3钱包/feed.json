@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "DuoLa口袋不放糖 • All posts by \"web3钱包\" tag",
+    "description": "人来人往，盼青龙上岸，只怪你我相见恨晚",
+    "home_page_url": "https://github.com/Catlina-2B/catlina-2B.github.io",
+    "items": [
+        {
+            "id": "https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/",
+            "url": "https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/",
+            "title": "OKX MPC wallet",
+            "date_published": "2024-03-24T04:10:00.000Z",
+            "content_html": "<p>OKX 无私钥钱包基于 MPC 技术，将原本的 1 个完整私钥，变成 3 个各自生成的私钥碎片，分开存储，签名时使用其中 2 份私钥碎片即可完成签名，过程中不会产生完整的私钥。在创建无私钥钱包时，OKX 服务器生成一份私钥碎片 1，用户设备生成私钥碎片 2 和私钥碎片 3，其中私钥碎片 2 加密保存在用户设备上，私钥碎片 3 加密备份到 iCloud 或 Google Drive。交易签名时使用私钥碎片 1 + 私钥碎片 2，私钥碎片 3 用作备份。<br>\n此外，OKX 首创紧急出口功能，使用者可在紧急场景下，透过完全由自己管理的两个私钥分片（私钥碎片 2 和私钥碎片 3），即可导出私钥提走资产，实现了真正意义上的去中心化自托管无私钥钱包。使用 OKX 帐户即可轻松建立该钱包，无需再管理复杂的私钥或者助记词，非常注重用户体验</p>\n",
+            "tags": [
+                "MPC",
+                "Web3钱包"
+            ]
+        }
+    ]
+}

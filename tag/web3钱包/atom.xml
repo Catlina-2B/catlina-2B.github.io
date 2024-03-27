@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/Catlina-2B/catlina-2B.github.io</id>
+    <title>DuoLa口袋不放糖 • Posts by &#34;web3钱包&#34; tag</title>
+    <link href="https://github.com/Catlina-2B/catlina-2B.github.io" />
+    <updated>2024-03-24T04:10:00.000Z</updated>
+    <category term="markdown" />
+    <category term="css" />
+    <category term="算法" />
+    <category term="mac" />
+    <category term="命令行" />
+    <category term="Mac" />
+    <category term="nuxt" />
+    <category term="node" />
+    <category term="http" />
+    <category term="vite" />
+    <category term="dagre" />
+    <category term="websocket" />
+    <category term="vue" />
+    <category term="seo" />
+    <category term="MPC" />
+    <category term="EIP" />
+    <category term="Web3钱包" />
+    <category term="EIP-1559" />
+    <category term="EIP-404" />
+    <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/</id>
+        <title>OKX MPC wallet</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/"/>
+        <content type="html">&lt;p&gt;OKX 无私钥钱包基于 MPC 技术，将原本的 1 个完整私钥，变成 3 个各自生成的私钥碎片，分开存储，签名时使用其中 2 份私钥碎片即可完成签名，过程中不会产生完整的私钥。在创建无私钥钱包时，OKX 服务器生成一份私钥碎片 1，用户设备生成私钥碎片 2 和私钥碎片 3，其中私钥碎片 2 加密保存在用户设备上，私钥碎片 3 加密备份到 iCloud 或 Google Drive。交易签名时使用私钥碎片 1 + 私钥碎片 2，私钥碎片 3 用作备份。&lt;br&gt;
+此外，OKX 首创紧急出口功能，使用者可在紧急场景下，透过完全由自己管理的两个私钥分片（私钥碎片 2 和私钥碎片 3），即可导出私钥提走资产，实现了真正意义上的去中心化自托管无私钥钱包。使用 OKX 帐户即可轻松建立该钱包，无需再管理复杂的私钥或者助记词，非常注重用户体验&lt;/p&gt;
+</content>
+        <category term="MPC" />
+        <category term="Web3钱包" />
+        <updated>2024-03-24T04:10:00.000Z</updated>
+    </entry>
+</feed>

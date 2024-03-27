@@ -3,29 +3,26 @@
     <id>https://github.com/Catlina-2B/catlina-2B.github.io</id>
     <title>DuoLa口袋不放糖 • Posts by &#34;算法学习&#34; category</title>
     <link href="https://github.com/Catlina-2B/catlina-2B.github.io" />
-    <updated>2022-04-05T10:58:00.000Z</updated>
-    <category term="算法" />
+    <updated>2022-04-03T09:46:00.000Z</updated>
     <category term="markdown" />
     <category term="css" />
+    <category term="算法" />
     <category term="mac" />
     <category term="命令行" />
+    <category term="Mac" />
     <category term="nuxt" />
     <category term="node" />
     <category term="http" />
     <category term="vite" />
     <category term="dagre" />
+    <category term="websocket" />
     <category term="vue" />
     <category term="seo" />
-    <category term="websocket" />
-    <entry>
-        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/04/05/binarySearch/</id>
-        <title>二分查找</title>
-        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2022/04/05/binarySearch/"/>
-        <content type="html">&lt;h1&gt;学算法&lt;/h1&gt;
-</content>
-        <category term="算法" />
-        <updated>2022-04-05T10:58:00.000Z</updated>
-    </entry>
+    <category term="MPC" />
+    <category term="EIP" />
+    <category term="Web3钱包" />
+    <category term="EIP-1559" />
+    <category term="EIP-404" />
     <entry>
         <id>https://github.com/Catlina-2B/catlina-2B.github.io/2022/04/03/twoPlus/</id>
         <title>两数相加</title>

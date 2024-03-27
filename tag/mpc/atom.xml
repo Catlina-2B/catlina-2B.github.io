@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/Catlina-2B/catlina-2B.github.io</id>
+    <title>DuoLa口袋不放糖 • Posts by &#34;mpc&#34; tag</title>
+    <link href="https://github.com/Catlina-2B/catlina-2B.github.io" />
+    <updated>2024-03-25T08:52:00.000Z</updated>
+    <category term="markdown" />
+    <category term="css" />
+    <category term="算法" />
+    <category term="mac" />
+    <category term="命令行" />
+    <category term="Mac" />
+    <category term="nuxt" />
+    <category term="node" />
+    <category term="http" />
+    <category term="vite" />
+    <category term="dagre" />
+    <category term="websocket" />
+    <category term="vue" />
+    <category term="seo" />
+    <category term="MPC" />
+    <category term="EIP" />
+    <category term="Web3钱包" />
+    <category term="EIP-1559" />
+    <category term="EIP-404" />
+    <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/25/mpc2/</id>
+        <title>多方安全计算-MPC</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/25/mpc2/"/>
+        <content type="html">&lt;h1 id=&#34;多方安全计算-mpc-secure-multi-party-computation&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#多方安全计算-mpc-secure-multi-party-computation&#34;&gt;#&lt;/a&gt; 多方安全计算 - MPC（ Secure Multi-Party Computation ）&lt;/h1&gt;
+&lt;p&gt;多方安全计算 (MPC) 是在无可信第三方情况下，多个参与方协同完成计算目标，并保证每个参与者除计算结果外均不能得到其他参与实体的任何输入信息。多方安全计算问题最初起源于 1982 年姚期智院士提出的百万富翁问题，后来经过多年不断的发展，成为目前密码学的一个重要分支。多方安全计算是基于密码学的算法协议来实现隐私保护，常见的多方安全计算协议包括秘密共享（Secret Sharing，SS） 、混淆电路（Garbled Circuit，GC）、同态加密（Homomorphic Encryption，HE）、不经意传输（Oblivious Transfer，OT）等。多方安全计算技术可以获取数据使用价值，却不泄露原始数据内容，保护隐私，可适用于多方联合数据分析、数据安全查询（PIR，Private Information Retrieval）、隐私求交（PSI，rivate Set Intersection）、数据可信交换等应用场景。一系列用于 MPC 的开源库（例如 ABY、EMP-toolkit，FRESCO，JIFF 、MP-SPDZ，MPyC, SCALE-MAMBA，和 TinyGable 等) 得到了发展，进一步推动了 MPC 的应用和部署。&lt;/p&gt;
+&lt;p&gt;作者：京东云开发者&lt;br&gt;
+链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC83MTgyMDcyOTUzMjQzMTcyOTIz&#34;&gt;https://juejin.cn/post/7182072953243172923&lt;/span&gt;&lt;br&gt;
+ 来源：稀土掘金&lt;br&gt;
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
+</content>
+        <category term="MPC" />
+        <updated>2024-03-25T08:52:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/25/mpc/</id>
+        <title>MPC协议</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/25/mpc/"/>
+        <content type="html">&lt;h1 id=&#34;mpc介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mpc介绍&#34;&gt;#&lt;/a&gt; MPC 介绍&lt;/h1&gt;
+&lt;p&gt;安全多方计算（Secure Multi-Party Computation），记为 SMPC/ MPC，它是指在无可信第三方的情况下，多个参与方协同计算一个约定的函数。MPC 起源于姚期智先生于 1982 年提出的百万富翁问题及其密码学解法，后来不断发展和完善，已成为当前密码学的一个重要分支。&lt;br&gt;
+Safeheron Lab 一直以来深耕 MPC 研究，与姚期智院士创建的图灵研究院共建联合实验室，深度参与可信计算与区块链融合的研究，Safeheron Lab 已将部分 MPC 研究课题开源。&lt;br&gt;
+从 2018 年开始，MPC 技术被应用在区块链数字资产领域的私钥安全设计中。据不完全统计，4 年时间内，超过 3 万亿美元的数字资产转移通过 MPC 私钥方案签署完成，这一方案被纽约梅隆等上千家银行和顶级机构采用。2010 年后，MPC 开始越来越频繁地进入实用阶段。&lt;br&gt;
+目前 MPC 协议可以分成两大类：通用 MPC 协议和专用 MPC 协议。&lt;br&gt;
+通用 MPC 协议，顾名思义，具有通用性，理论上可支持任何计算任务。它一般基于混淆电路（Garbled Circuit）实现。具体实现步骤是将计算逻辑编译成电路，然后混淆执行。然而，随着问题的复杂化（大部分常见问题就很复杂），电路的规模也会迅速扩大，导致计算效率大大降低。&lt;br&gt;
+专用 MPC 协议则是指为解决特定问题所构造出的特殊 MPC 协议。由于是针对性构造并进行优化，专用算法的效率会比基于混淆电路的通用框架高很多。常见 MPC 专用算法包含，四则运算、比较运算、矩阵运算、隐私集合求交集、隐私数据查询、私钥门限签名等。&lt;br&gt;
+在实际应用场景中，人们常常会寻求快速高效的专用 MPC 协议。&lt;/p&gt;
+&lt;h1 id=&#34;区块链领域的-mpc-研究&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#区块链领域的-mpc-研究&#34;&gt;#&lt;/a&gt; 区块链领域的 MPC 研究&lt;/h1&gt;
+&lt;p&gt;随着研究的推进，一些重要的 MPC 多签协议相继被发表。在 MPC-ECDSA 研究方向，典型的有，Lin17 提出的关于 ECDSA 的两方签名算法和 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAxOS8xMTQucGRm&#34;&gt;GG18&lt;/span&gt; 提出的多方参与的门限签名协议。此后，算法协议层出不穷，比如 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAxOC80OTkucGRm&#34;&gt;DKLS18&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAxOS81MjMucGRm&#34;&gt;DKLS19&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAyMC81NDAucGRm&#34;&gt;GG20&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAyMC80OTIucGRm&#34;&gt;MPC-CMP&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAyMi8yOTcucGRm&#34;&gt;DMZ-21&lt;/span&gt; 等等。这些算法研究的重心在于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;减少通信次数&lt;/li&gt;
+&lt;li&gt;降低计算工作量&lt;/li&gt;
+&lt;li&gt;安全性分析与安全增强&lt;/li&gt;
+&lt;li&gt;增强对恶意敌手的识别能力&lt;/li&gt;
+&lt;li&gt;降低生成私钥的算力要求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;更快、更高效、更安全&lt;/code&gt; 始终是 MPC 研究的目标。&lt;/p&gt;
+&lt;h1 id=&#34;开源-mpc-ecdsa-协议&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#开源-mpc-ecdsa-协议&#34;&gt;#&lt;/a&gt; 开源 MPC-ECDSA 协议&lt;/h1&gt;
+&lt;p&gt;Safeheron 此次一共开源 3 种具有代表性的 MPC-ECDSA 协议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAxOS8xMTQucGRm&#34;&gt;GG18&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAyMC81NDAucGRm&#34;&gt;GG20&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcHJpbnQuaWFjci5vcmcvMjAyMC80OTIucGRm&#34;&gt;MPC-CMP&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中， &lt;code&gt;GG18&lt;/code&gt;  是 Rosario Gennaro 和 Steven Goldfeder 提出来的，并且是第一个有影响力的、进入实用阶段的 MPC-ECDSA 门限多签协议。大部分后续提出的 MPC-ECDSA 门限多签协议，都可以看作是  &lt;code&gt;GG18&lt;/code&gt;  不同角度的优化版本。需要注意的是， &lt;code&gt;GG18&lt;/code&gt;  早期版本存在一些安全隐患，在安全分析报告的基础上，此次开源的算法对其进行了针对性的修正。&lt;/p&gt;
+</content>
+        <category term="MPC" />
+        <updated>2024-03-25T07:52:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/</id>
+        <title>OKX MPC wallet</title>
+        <link rel="alternate" href="https://github.com/Catlina-2B/catlina-2B.github.io/2024/03/24/okmpc/"/>
+        <content type="html">&lt;p&gt;OKX 无私钥钱包基于 MPC 技术，将原本的 1 个完整私钥，变成 3 个各自生成的私钥碎片，分开存储，签名时使用其中 2 份私钥碎片即可完成签名，过程中不会产生完整的私钥。在创建无私钥钱包时，OKX 服务器生成一份私钥碎片 1，用户设备生成私钥碎片 2 和私钥碎片 3，其中私钥碎片 2 加密保存在用户设备上，私钥碎片 3 加密备份到 iCloud 或 Google Drive。交易签名时使用私钥碎片 1 + 私钥碎片 2，私钥碎片 3 用作备份。&lt;br&gt;
+此外，OKX 首创紧急出口功能，使用者可在紧急场景下，透过完全由自己管理的两个私钥分片（私钥碎片 2 和私钥碎片 3），即可导出私钥提走资产，实现了真正意义上的去中心化自托管无私钥钱包。使用 OKX 帐户即可轻松建立该钱包，无需再管理复杂的私钥或者助记词，非常注重用户体验&lt;/p&gt;
+</content>
+        <category term="MPC" />
+        <category term="Web3钱包" />
+        <updated>2024-03-24T04:10:00.000Z</updated>
+    </entry>
+</feed>

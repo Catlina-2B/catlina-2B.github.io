@@ -7,19 +7,25 @@
         <language>zh-tw</language>
         <pubDate>Tue, 13 Sep 2022 18:41:05 +0800</pubDate>
         <lastBuildDate>Tue, 13 Sep 2022 18:41:05 +0800</lastBuildDate>
-        <category>算法</category>
         <category>markdown</category>
         <category>css</category>
+        <category>算法</category>
         <category>mac</category>
         <category>命令行</category>
+        <category>Mac</category>
         <category>nuxt</category>
         <category>node</category>
         <category>http</category>
         <category>vite</category>
         <category>dagre</category>
+        <category>websocket</category>
         <category>vue</category>
         <category>seo</category>
-        <category>websocket</category>
+        <category>MPC</category>
+        <category>EIP</category>
+        <category>Web3钱包</category>
+        <category>EIP-1559</category>
+        <category>EIP-404</category>
         <item>
             <guid isPermalink="true">https://github.com/Catlina-2B/catlina-2B.github.io/2022/09/13/nuxtFont/</guid>
             <title>nuxt引入字体问题</title>
